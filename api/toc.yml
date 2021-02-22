@@ -1,3 +1,5 @@
+- name: Tc.Prober
+  href: Tc.Prober/toc.yml
 - name: TcoCore
   href: TcoCore/toc.yml
 - name: TcoIoBeckhoff
