@@ -684,7 +684,8 @@
   
   <h1 id="TcoCore_TcoMessage_PlcTcoMessage" data-uid="TcoCore.TcoMessage.PlcTcoMessage" class="text-break">Class TcoMessage.PlcTcoMessage
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Complete message details including time stamp, message text, message category, identity of the message provider, PLC cycle in which the message was posted.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -725,10 +726,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L378">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L443">View Source</a>
   </span>
   <a id="TcoCore_TcoMessage_PlcTcoMessage__ctor_" data-uid="TcoCore.TcoMessage.PlcTcoMessage.#ctor*"></a>
   <h4 id="TcoCore_TcoMessage_PlcTcoMessage__ctor" data-uid="TcoCore.TcoMessage.PlcTcoMessage.#ctor">PlcTcoMessage()</h4>
@@ -739,6 +740,158 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected PlcTcoMessage()</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage_Category.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L435">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoMessage_PlcTcoMessage_Category" data-uid="TcoCore.TcoMessage.PlcTcoMessage.Category">Category</h4>
+  <div class="markdown level1 summary"><p>Message category of this message. See <a class="xref" href="TcoCore.eMessageCategory.html">eMessageCategory</a> for detailed informations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short Category</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage_Cycle.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.Cycle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L441">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoMessage_PlcTcoMessage_Cycle" data-uid="TcoCore.TcoMessage.PlcTcoMessage.Cycle">Cycle</h4>
+  <div class="markdown level1 summary"><p>Number of the PLC cycle in which the message was posted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Cycle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage_Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L429">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoMessage_PlcTcoMessage_Identity" data-uid="TcoCore.TcoMessage.PlcTcoMessage.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>Identity of the TcoObject that posted this message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Identity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage_Text.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L423">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoMessage_PlcTcoMessage_Text" data-uid="TcoCore.TcoMessage.PlcTcoMessage.Text">Text</h4>
+  <div class="markdown level1 summary"><p>Text of the message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Text</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage_TimeStamp.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage.TimeStamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L417">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoMessage_PlcTcoMessage_TimeStamp" data-uid="TcoCore.TcoMessage.PlcTcoMessage.TimeStamp">TimeStamp</h4>
+  <div class="markdown level1 summary"><p>Time when the message was posted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object TimeStamp</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -747,10 +900,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoMessage_PlcTcoMessage.md&amp;value=---%0Auid%3A%20TcoCore.TcoMessage.PlcTcoMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L374" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoMessage.g.cs/#L409" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

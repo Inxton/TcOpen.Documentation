@@ -684,7 +684,69 @@
   
   <h1 id="TcoCore_TcoObject_PlcTcoObject" data-uid="TcoCore.TcoObject.PlcTcoObject" class="text-break">Class TcoObject.PlcTcoObject
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Basic construction block from which all the others block of a TcOpen application must derive.
+This function block is abstract; it cannot be instantiated and must be extended.
+TcoObject must be assigned to some TcoContext at construction via <code>FB_init()</code>. TcoObject can have only one context.
+The TcoObject provides this context to all its members, so all objects in the TcoContext has the same context.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	All the variables _myContext, _ContextTcoObjectA, _ContextTcoObjectB, _ContextChildTcoObject should have all the same value.
+</p>
+<p>
+	All the variables _myIdentity, _TcoObjectAidentity, _TcoObjectBidentity, _ChildTcoObjectidentity should have uniques values.
+</p>
+<pre><code>//Declaration of the myTcoObject 
+FUNCTION_BLOCK myTcoObject EXTENDS TcoObject
+VAR
+_myChildTcoObject	:	myChildTcoObject(THIS^);
+END_VAR
+//Declaration of the myTcoContext 
+FUNCTION_BLOCK myTcoContext EXTENDS TcoContext
+VAR
+_myTcoObjectA		:	myTcoObject(THIS^);					
+_myTcoObjectB		:	myTcoObject(_myTcoObjectA.Context); 
+_myContext		:	ITcoContext;
+_ContextTcoObjectA	:	ITcoContext;
+_ContextTcoObjectB	:	ITcoContext;
+_ContextChildTcoObject	:	ITcoContext;
+_myIdentity		:	ULINT;
+_TcoObjectAidentity	: 	ULINT;
+_TcoObjectBidentity	: 	ULINT;
+_ChildTcoObjectidentity	: 	ULINT;							
+END_VAR
+//Plc code of the myTcoContext 
+_myContext		:= 		THIS^.Context;
+_ContextTcoObjectA	:=		_myTcoObjectA.Context;
+_ContextTcoObjectB	:=		_myTcoObjectB.Context;
+_ContextChildTcoObject	:=		_myTcoObjectB._myChildTcoObject.Context;
+_myIdentity		:=		THIS^.Identity;
+_TcoObjectAidentity	:=		_myTcoObjectA.Identity;
+_TcoObjectBidentity	:=		_myTcoObjectB.Identity;
+_ChildTcoObjectidentity	:=		_myTcoObjectB._myChildTcoObject.Identity;</code></pre>
+<div class="NOTE"><h5>Explanation</h5><p>
+<p>
+	The context of the myTcoContext instance is assigned to itself. As the _myTcoObjectA context is assigned to this instance of the myTcoContext, it is assigned to the same context,
+	and the value of the _ContextTcoObjectA will be the same as the value of the _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB instance is assigned to the _myTcoObjectA, that has already assigned context to this instance of the myTcoContext.
+	So the value of the _ContextTcoObjectB will be the same as the values of the _ContextTcoObjectA and _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB._myChildTcoObject instance is assigned to the _myTcoObjectB, that has already assigned context to _myTcoObjectA, 
+	that has already assigned its context to this instance of the myTcoContext.
+	So the value of the _ContextChildTcoObject wile be the same as the values _ContextTcoObjectB,_ContextTcoObjectA and _myContext.
+</p>
+<p>
+	As the Identities of all objects points to the themselves, all identities will have different values, as all objects are unique.
+</p>					
+</p></div>
+</p></div>
+</example>
+</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -728,10 +790,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L247">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L437">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_PlcTcoObject__ctor_" data-uid="TcoCore.TcoObject.PlcTcoObject.#ctor*"></a>
   <h4 id="TcoCore_TcoObject_PlcTcoObject__ctor" data-uid="TcoCore.TcoObject.PlcTcoObject.#ctor">PlcTcoObject()</h4>
@@ -742,6 +804,199 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected PlcTcoObject()</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject._Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L433">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoObject_PlcTcoObject__Identity" data-uid="TcoCore.TcoObject.PlcTcoObject._Identity">_Identity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _Identity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject__messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject._messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L435">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoObject_PlcTcoObject__messenger" data-uid="TcoCore.TcoObject.PlcTcoObject._messenger">_messenger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _messenger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject__Parent.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject._Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L434">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoObject_PlcTcoObject__Parent" data-uid="TcoCore.TcoObject.PlcTcoObject._Parent">_Parent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _Parent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject_Context.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject.Context%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L390">View Source</a>
+  </span>
+  <a id="TcoCore_TcoObject_PlcTcoObject_Context_" data-uid="TcoCore.TcoObject.PlcTcoObject.Context*"></a>
+  <h4 id="TcoCore_TcoObject_PlcTcoObject_Context" data-uid="TcoCore.TcoObject.PlcTcoObject.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Returns the context of the parent object, that this object is assigned to.
+This context is given by declaration, its value is assigned after download by calling the implicit method <code>FB_init()</code> and cannot be changed during runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoContext; Twin type: <a class="xref" href="TcoCore.ITcoContext.html">ITcoContext</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject_Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject.Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L407">View Source</a>
+  </span>
+  <a id="TcoCore_TcoObject_PlcTcoObject_Identity_" data-uid="TcoCore.TcoObject.PlcTcoObject.Identity*"></a>
+  <h4 id="TcoCore_TcoObject_PlcTcoObject_Identity" data-uid="TcoCore.TcoObject.PlcTcoObject.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>Returns the own identity of the <a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__ctor">PlcTcoObject()</a>. This value is assigned after download by calling the implicit method <code>FB_init()</code> and cannot be changed during runtime.
+This variable is used in the higher level packages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ULINT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerULInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject_Messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject.Messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L424">View Source</a>
+  </span>
+  <a id="TcoCore_TcoObject_PlcTcoObject_Messenger_" data-uid="TcoCore.TcoObject.PlcTcoObject.Messenger*"></a>
+  <h4 id="TcoCore_TcoObject_PlcTcoObject_Messenger" data-uid="TcoCore.TcoObject.PlcTcoObject.Messenger">Messenger</h4>
+  <div class="markdown level1 summary"><p>Returns current messenger that is part of this object.
+See <a class="xref" href="TcoCore.TcoMessenger.PlcTcoMessenger.html#TcoCore_TcoMessenger_PlcTcoMessenger__ctor">PlcTcoMessenger()</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Messenger { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoMessenger; Twin type: <a class="xref" href="TcoCore.ITcoMessenger.html">ITcoMessenger</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -750,10 +1005,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PlcTcoObject.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PlcTcoObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L243" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L379" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

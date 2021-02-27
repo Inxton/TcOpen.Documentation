@@ -684,7 +684,69 @@
   
   <h1 id="TcoCore_TcoObject" data-uid="TcoCore.TcoObject" class="text-break">Class TcoObject
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Basic construction block from which all the others block of a TcOpen application must derive.
+This function block is abstract; it cannot be instantiated and must be extended.
+TcoObject must be assigned to some TcoContext at construction via <code>FB_init()</code>. TcoObject can have only one context.
+The TcoObject provides this context to all its members, so all objects in the TcoContext has the same context.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	All the variables _myContext, _ContextTcoObjectA, _ContextTcoObjectB, _ContextChildTcoObject should have all the same value.
+</p>
+<p>
+	All the variables _myIdentity, _TcoObjectAidentity, _TcoObjectBidentity, _ChildTcoObjectidentity should have uniques values.
+</p>
+<pre><code>//Declaration of the myTcoObject 
+FUNCTION_BLOCK myTcoObject EXTENDS TcoObject
+VAR
+_myChildTcoObject	:	myChildTcoObject(THIS^);
+END_VAR
+//Declaration of the myTcoContext 
+FUNCTION_BLOCK myTcoContext EXTENDS TcoContext
+VAR
+_myTcoObjectA		:	myTcoObject(THIS^);					
+_myTcoObjectB		:	myTcoObject(_myTcoObjectA.Context); 
+_myContext		:	ITcoContext;
+_ContextTcoObjectA	:	ITcoContext;
+_ContextTcoObjectB	:	ITcoContext;
+_ContextChildTcoObject	:	ITcoContext;
+_myIdentity		:	ULINT;
+_TcoObjectAidentity	: 	ULINT;
+_TcoObjectBidentity	: 	ULINT;
+_ChildTcoObjectidentity	: 	ULINT;							
+END_VAR
+//Plc code of the myTcoContext 
+_myContext		:= 		THIS^.Context;
+_ContextTcoObjectA	:=		_myTcoObjectA.Context;
+_ContextTcoObjectB	:=		_myTcoObjectB.Context;
+_ContextChildTcoObject	:=		_myTcoObjectB._myChildTcoObject.Context;
+_myIdentity		:=		THIS^.Identity;
+_TcoObjectAidentity	:=		_myTcoObjectA.Identity;
+_TcoObjectBidentity	:=		_myTcoObjectB.Identity;
+_ChildTcoObjectidentity	:=		_myTcoObjectB._myChildTcoObject.Identity;</code></pre>
+<div class="NOTE"><h5>Explanation</h5><p>
+<p>
+	The context of the myTcoContext instance is assigned to itself. As the _myTcoObjectA context is assigned to this instance of the myTcoContext, it is assigned to the same context,
+	and the value of the _ContextTcoObjectA will be the same as the value of the _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB instance is assigned to the _myTcoObjectA, that has already assigned context to this instance of the myTcoContext.
+	So the value of the _ContextTcoObjectB will be the same as the values of the _ContextTcoObjectA and _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB._myChildTcoObject instance is assigned to the _myTcoObjectB, that has already assigned context to _myTcoObjectA, 
+	that has already assigned its context to this instance of the myTcoContext.
+	So the value of the _ContextChildTcoObject wile be the same as the values _ContextTcoObjectB,_ContextTcoObjectA and _myContext.
+</p>
+<p>
+	As the Identities of all objects points to the themselves, all identities will have different values, as all objects are unique.
+</p>					
+</p></div>
+</p></div>
+</example>
+</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -740,10 +802,10 @@ public class TcoObject : IVortexIdentity, IVortexObject, ITwinObject, IVortexEle
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L235">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L303">View Source</a>
   </span>
   <a id="TcoCore_TcoObject__ctor_" data-uid="TcoCore.TcoObject.#ctor*"></a>
   <h4 id="TcoCore_TcoObject__ctor" data-uid="TcoCore.TcoObject.#ctor">TcoObject()</h4>
@@ -755,10 +817,10 @@ public class TcoObject : IVortexIdentity, IVortexObject, ITwinObject, IVortexEle
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject__ctor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.%23ctor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject__ctor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.%23ctor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L216">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L284">View Source</a>
   </span>
   <a id="TcoCore_TcoObject__ctor_" data-uid="TcoCore.TcoObject.#ctor*"></a>
   <h4 id="TcoCore_TcoObject__ctor_Vortex_Connector_IVortexObject_System_String_System_String_" data-uid="TcoCore.TcoObject.#ctor(Vortex.Connector.IVortexObject,System.String,System.String)">TcoObject(IVortexObject, String, String)</h4>
@@ -799,10 +861,10 @@ public class TcoObject : IVortexIdentity, IVortexObject, ITwinObject, IVortexEle
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject___Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.__Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject___Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.__Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L34">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L102">View Source</a>
   </span>
   <h4 id="TcoCore_TcoObject___Identity" data-uid="TcoCore.TcoObject.__Identity">__Identity</h4>
   <div class="markdown level1 summary"></div>
@@ -828,10 +890,10 @@ public class TcoObject : IVortexIdentity, IVortexObject, ITwinObject, IVortexEle
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject__humanReadable.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject._humanReadable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject__humanReadable.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject._humanReadable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L33">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L101">View Source</a>
   </span>
   <h4 id="TcoCore_TcoObject__humanReadable" data-uid="TcoCore.TcoObject._humanReadable">_humanReadable</h4>
   <div class="markdown level1 summary"></div>
@@ -859,10 +921,10 @@ public class TcoObject : IVortexIdentity, IVortexObject, ITwinObject, IVortexEle
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject__AttributeName.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject._AttributeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject__AttributeName.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject._AttributeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L210">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L278">View Source</a>
   </span>
   <a id="TcoCore_TcoObject__AttributeName_" data-uid="TcoCore.TcoObject._AttributeName*"></a>
   <h4 id="TcoCore_TcoObject__AttributeName" data-uid="TcoCore.TcoObject._AttributeName">_AttributeName</h4>
@@ -891,10 +953,10 @@ public class TcoObject : IVortexIdentity, IVortexObject, ITwinObject, IVortexEle
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject._Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject._Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L35">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L103">View Source</a>
   </span>
   <a id="TcoCore_TcoObject__Identity_" data-uid="TcoCore.TcoObject._Identity*"></a>
   <h4 id="TcoCore_TcoObject__Identity" data-uid="TcoCore.TcoObject._Identity">_Identity</h4>
@@ -923,10 +985,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_AttributeName.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AttributeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_AttributeName.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AttributeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L197">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L265">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_AttributeName_" data-uid="TcoCore.TcoObject.AttributeName*"></a>
   <h4 id="TcoCore_TcoObject_AttributeName" data-uid="TcoCore.TcoObject.AttributeName">AttributeName</h4>
@@ -953,10 +1015,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_Children.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_Children.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L85">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L153">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_Children_" data-uid="TcoCore.TcoObject.Children*"></a>
   <h4 id="TcoCore_TcoObject_Children" data-uid="TcoCore.TcoObject.Children">Children</h4>
@@ -985,10 +1047,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_Connector.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Connector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_Connector.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Connector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L146">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L214">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_Connector_" data-uid="TcoCore.TcoObject.Connector*"></a>
   <h4 id="TcoCore_TcoObject_Connector" data-uid="TcoCore.TcoObject.Connector">Connector</h4>
@@ -1015,10 +1077,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_HumanReadable.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.HumanReadable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_HumanReadable.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.HumanReadable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L20">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L88">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_HumanReadable_" data-uid="TcoCore.TcoObject.HumanReadable*"></a>
   <h4 id="TcoCore_TcoObject_HumanReadable" data-uid="TcoCore.TcoObject.HumanReadable">HumanReadable</h4>
@@ -1045,10 +1107,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/pex/TcoObject/TcoObject.cs/#L14">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/pex/TcoObject/TcoObject.cs/#L14">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_Identity_" data-uid="TcoCore.TcoObject.Identity*"></a>
   <h4 id="TcoCore_TcoObject_Identity" data-uid="TcoCore.TcoObject.Identity">Identity</h4>
@@ -1075,10 +1137,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_Kids.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Kids%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_Kids.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Kids%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L101">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L169">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_Kids_" data-uid="TcoCore.TcoObject.Kids*"></a>
   <h4 id="TcoCore_TcoObject_Kids" data-uid="TcoCore.TcoObject.Kids">Kids</h4>
@@ -1107,10 +1169,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_Parent.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_Parent.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L119">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L187">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_Parent_" data-uid="TcoCore.TcoObject.Parent*"></a>
   <h4 id="TcoCore_TcoObject_Parent" data-uid="TcoCore.TcoObject.Parent">Parent</h4>
@@ -1137,10 +1199,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_Symbol.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Symbol%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_Symbol.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.Symbol%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L14">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L82">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_Symbol_" data-uid="TcoCore.TcoObject.Symbol*"></a>
   <h4 id="TcoCore_TcoObject_Symbol" data-uid="TcoCore.TcoObject.Symbol">Symbol</h4>
@@ -1167,10 +1229,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_SymbolTail.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.SymbolTail%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_SymbolTail.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.SymbolTail%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L186">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L254">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_SymbolTail_" data-uid="TcoCore.TcoObject.SymbolTail*"></a>
   <h4 id="TcoCore_TcoObject_SymbolTail" data-uid="TcoCore.TcoObject.SymbolTail">SymbolTail</h4>
@@ -1197,10 +1259,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_ValueTags.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.ValueTags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_ValueTags.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.ValueTags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L130">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L198">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_ValueTags_" data-uid="TcoCore.TcoObject.ValueTags*"></a>
   <h4 id="TcoCore_TcoObject_ValueTags" data-uid="TcoCore.TcoObject.ValueTags">ValueTags</h4>
@@ -1231,10 +1293,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_AddChild_Vortex_Connector_IVortexObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AddChild(Vortex.Connector.IVortexObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_AddChild_Vortex_Connector_IVortexObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AddChild(Vortex.Connector.IVortexObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L96">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L164">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_AddChild_" data-uid="TcoCore.TcoObject.AddChild*"></a>
   <h4 id="TcoCore_TcoObject_AddChild_Vortex_Connector_IVortexObject_" data-uid="TcoCore.TcoObject.AddChild(Vortex.Connector.IVortexObject)">AddChild(IVortexObject)</h4>
@@ -1263,10 +1325,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_AddKid_Vortex_Connector_IVortexElement_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AddKid(Vortex.Connector.IVortexElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_AddKid_Vortex_Connector_IVortexElement_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AddKid(Vortex.Connector.IVortexElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L112">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L180">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_AddKid_" data-uid="TcoCore.TcoObject.AddKid*"></a>
   <h4 id="TcoCore_TcoObject_AddKid_Vortex_Connector_IVortexElement_" data-uid="TcoCore.TcoObject.AddKid(Vortex.Connector.IVortexElement)">AddKid(IVortexElement)</h4>
@@ -1295,10 +1357,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_AddValueTag_Vortex_Connector_IValueTag_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AddValueTag(Vortex.Connector.IValueTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_AddValueTag_Vortex_Connector_IValueTag_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.AddValueTag(Vortex.Connector.IValueTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L141">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L209">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_AddValueTag_" data-uid="TcoCore.TcoObject.AddValueTag*"></a>
   <h4 id="TcoCore_TcoObject_AddValueTag_Vortex_Connector_IValueTag_" data-uid="TcoCore.TcoObject.AddValueTag(Vortex.Connector.IValueTag)">AddValueTag(IValueTag)</h4>
@@ -1327,10 +1389,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_CopyPlainToShadow_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.CopyPlainToShadow(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_CopyPlainToShadow_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.CopyPlainToShadow(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L163">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L231">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_CopyPlainToShadow_" data-uid="TcoCore.TcoObject.CopyPlainToShadow*"></a>
   <h4 id="TcoCore_TcoObject_CopyPlainToShadow_TcoCore_PlainTcoObject_" data-uid="TcoCore.TcoObject.CopyPlainToShadow(TcoCore.PlainTcoObject)">CopyPlainToShadow(PlainTcoObject)</h4>
@@ -1359,10 +1421,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_CreatePlainerType.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.CreatePlainerType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_CreatePlainerType.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.CreatePlainerType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L72">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L140">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_CreatePlainerType_" data-uid="TcoCore.TcoObject.CreatePlainerType*"></a>
   <h4 id="TcoCore_TcoObject_CreatePlainerType" data-uid="TcoCore.TcoObject.CreatePlainerType">CreatePlainerType()</h4>
@@ -1389,10 +1451,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_CreatePlainerType_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.CreatePlainerType(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_CreatePlainerType_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.CreatePlainerType(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L78">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L146">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_CreatePlainerType_" data-uid="TcoCore.TcoObject.CreatePlainerType*"></a>
   <h4 id="TcoCore_TcoObject_CreatePlainerType_TcoCore_PlainTcoObject_" data-uid="TcoCore.TcoObject.CreatePlainerType(TcoCore.PlainTcoObject)">CreatePlainerType(PlainTcoObject)</h4>
@@ -1436,10 +1498,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_FlushOnlineToPlain_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushOnlineToPlain(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_FlushOnlineToPlain_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushOnlineToPlain(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L180">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L248">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_FlushOnlineToPlain_" data-uid="TcoCore.TcoObject.FlushOnlineToPlain*"></a>
   <h4 id="TcoCore_TcoObject_FlushOnlineToPlain_TcoCore_PlainTcoObject_" data-uid="TcoCore.TcoObject.FlushOnlineToPlain(TcoCore.PlainTcoObject)">FlushOnlineToPlain(PlainTcoObject)</h4>
@@ -1468,10 +1530,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_FlushOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_FlushOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L174">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L242">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_FlushOnlineToShadow_" data-uid="TcoCore.TcoObject.FlushOnlineToShadow*"></a>
   <h4 id="TcoCore_TcoObject_FlushOnlineToShadow" data-uid="TcoCore.TcoObject.FlushOnlineToShadow">FlushOnlineToShadow()</h4>
@@ -1483,10 +1545,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_FlushPlainToOnline_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushPlainToOnline(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_FlushPlainToOnline_TcoCore_PlainTcoObject_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushPlainToOnline(TcoCore.PlainTcoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L157">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L225">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_FlushPlainToOnline_" data-uid="TcoCore.TcoObject.FlushPlainToOnline*"></a>
   <h4 id="TcoCore_TcoObject_FlushPlainToOnline_TcoCore_PlainTcoObject_" data-uid="TcoCore.TcoObject.FlushPlainToOnline(TcoCore.PlainTcoObject)">FlushPlainToOnline(PlainTcoObject)</h4>
@@ -1515,10 +1577,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_FlushShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_FlushShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.FlushShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L168">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L236">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_FlushShadowToOnline_" data-uid="TcoCore.TcoObject.FlushShadowToOnline*"></a>
   <h4 id="TcoCore_TcoObject_FlushShadowToOnline" data-uid="TcoCore.TcoObject.FlushShadowToOnline">FlushShadowToOnline()</h4>
@@ -1530,10 +1592,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_GetChildren.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_GetChildren.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L91">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L159">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_GetChildren_" data-uid="TcoCore.TcoObject.GetChildren*"></a>
   <h4 id="TcoCore_TcoObject_GetChildren" data-uid="TcoCore.TcoObject.GetChildren">GetChildren()</h4>
@@ -1560,10 +1622,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_GetConnector.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetConnector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_GetConnector.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetConnector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L152">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L220">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_GetConnector_" data-uid="TcoCore.TcoObject.GetConnector*"></a>
   <h4 id="TcoCore_TcoObject_GetConnector" data-uid="TcoCore.TcoObject.GetConnector">GetConnector()</h4>
@@ -1590,10 +1652,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_GetKids.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetKids%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_GetKids.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetKids%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L107">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L175">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_GetKids_" data-uid="TcoCore.TcoObject.GetKids*"></a>
   <h4 id="TcoCore_TcoObject_GetKids" data-uid="TcoCore.TcoObject.GetKids">GetKids()</h4>
@@ -1620,10 +1682,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_GetParent.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetParent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_GetParent.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetParent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L125">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L193">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_GetParent_" data-uid="TcoCore.TcoObject.GetParent*"></a>
   <h4 id="TcoCore_TcoObject_GetParent" data-uid="TcoCore.TcoObject.GetParent">GetParent()</h4>
@@ -1650,10 +1712,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_GetSymbolTail.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetSymbolTail%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_GetSymbolTail.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetSymbolTail%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L192">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L260">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_GetSymbolTail_" data-uid="TcoCore.TcoObject.GetSymbolTail*"></a>
   <h4 id="TcoCore_TcoObject_GetSymbolTail" data-uid="TcoCore.TcoObject.GetSymbolTail">GetSymbolTail()</h4>
@@ -1680,10 +1742,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_GetValueTags.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetValueTags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_GetValueTags.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.GetValueTags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L136">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L204">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_GetValueTags_" data-uid="TcoCore.TcoObject.GetValueTags*"></a>
   <h4 id="TcoCore_TcoObject_GetValueTags" data-uid="TcoCore.TcoObject.GetValueTags">GetValueTags()</h4>
@@ -1710,10 +1772,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_LazyOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.LazyOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_LazyOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.LazyOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L62">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L130">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_LazyOnlineToShadow_" data-uid="TcoCore.TcoObject.LazyOnlineToShadow*"></a>
   <h4 id="TcoCore_TcoObject_LazyOnlineToShadow" data-uid="TcoCore.TcoObject.LazyOnlineToShadow">LazyOnlineToShadow()</h4>
@@ -1725,10 +1787,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_LazyShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.LazyShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_LazyShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.LazyShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L67">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L135">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_LazyShadowToOnline_" data-uid="TcoCore.TcoObject.LazyShadowToOnline*"></a>
   <h4 id="TcoCore_TcoObject_LazyShadowToOnline" data-uid="TcoCore.TcoObject.LazyShadowToOnline">LazyShadowToOnline()</h4>
@@ -1740,10 +1802,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_PexConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PexConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L117">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L185">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_PexConstructor_" data-uid="TcoCore.TcoObject.PexConstructor*"></a>
   <h4 id="TcoCore_TcoObject_PexConstructor_Vortex_Connector_IVortexObject_System_String_System_String_" data-uid="TcoCore.TcoObject.PexConstructor(Vortex.Connector.IVortexObject,System.String,System.String)">PexConstructor(IVortexObject, String, String)</h4>
@@ -1782,10 +1844,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_PexConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PexConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L118">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L186">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_PexConstructorParameterless_" data-uid="TcoCore.TcoObject.PexConstructorParameterless*"></a>
   <h4 id="TcoCore_TcoObject_PexConstructorParameterless" data-uid="TcoCore.TcoObject.PexConstructorParameterless">PexConstructorParameterless()</h4>
@@ -1797,10 +1859,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_PexPreConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexPreConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PexPreConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexPreConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L83">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L151">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_PexPreConstructor_" data-uid="TcoCore.TcoObject.PexPreConstructor*"></a>
   <h4 id="TcoCore_TcoObject_PexPreConstructor_Vortex_Connector_IVortexObject_System_String_System_String_" data-uid="TcoCore.TcoObject.PexPreConstructor(Vortex.Connector.IVortexObject,System.String,System.String)">PexPreConstructor(IVortexObject, String, String)</h4>
@@ -1839,10 +1901,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_PexPreConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexPreConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_PexPreConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.PexPreConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L84">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L152">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_PexPreConstructorParameterless_" data-uid="TcoCore.TcoObject.PexPreConstructorParameterless*"></a>
   <h4 id="TcoCore_TcoObject_PexPreConstructorParameterless" data-uid="TcoCore.TcoObject.PexPreConstructorParameterless">PexPreConstructorParameterless()</h4>
@@ -1856,10 +1918,10 @@ public OnlinerULInt _Identity { get; }</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_TcoCore_IShadowTcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.TcoCore%23IShadowTcoObject%23_Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_TcoCore_IShadowTcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.TcoCore%23IShadowTcoObject%23_Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L53">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L121">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_TcoCore_IShadowTcoObject__Identity_" data-uid="TcoCore.TcoObject.TcoCore#IShadowTcoObject#_Identity*"></a>
   <h4 id="TcoCore_TcoObject_TcoCore_IShadowTcoObject__Identity" data-uid="TcoCore.TcoObject.TcoCore#IShadowTcoObject#_Identity">IShadowTcoObject._Identity</h4>
@@ -1888,10 +1950,10 @@ IShadowULInt IShadowTcoObject._Identity { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject_TcoCore_ITcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.TcoCore%23ITcoObject%23_Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject_TcoCore_ITcoObject__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject.TcoCore%23ITcoObject%23_Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L44">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L112">View Source</a>
   </span>
   <a id="TcoCore_TcoObject_TcoCore_ITcoObject__Identity_" data-uid="TcoCore.TcoObject.TcoCore#ITcoObject#_Identity*"></a>
   <h4 id="TcoCore_TcoObject_TcoCore_ITcoObject__Identity" data-uid="TcoCore.TcoObject.TcoCore#ITcoObject#_Identity">ITcoObject._Identity</h4>
@@ -1956,6 +2018,10 @@ IOnlineULInt ITcoObject._Identity { get; }</code></pre>
   <div>
       <a class="xref" href="TcoCore.IVortexObjectExtensions.html#TcoCore_IVortexObjectExtensions_GetChildren__1_Vortex_Connector_IVortexObject_System_Collections_Generic_IEnumerable_System_Object__">IVortexObjectExtensions.GetChildren&lt;T&gt;(IVortexObject, IEnumerable&lt;Object&gt;)</a>
   </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html">TcoObject.PlcTcoObject</a></div>
+  </div>
 </article>
           </div>
           
@@ -1964,10 +2030,10 @@ IOnlineULInt ITcoObject._Identity { get; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoObject.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoObject.md&amp;value=---%0Auid%3A%20TcoCore.TcoObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoObject.g.cs/#L79" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

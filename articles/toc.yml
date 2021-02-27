@@ -1,4 +1,6 @@
 - name: Introduction
   href: intro.md
+- name: TcOpen Application
+  href: Application/toc.yml
 - name: Conventions
   href: Conventions/toc.yml

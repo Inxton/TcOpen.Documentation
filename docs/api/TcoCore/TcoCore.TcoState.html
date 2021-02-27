@@ -684,7 +684,61 @@
   
   <h1 id="TcoCore_TcoState" data-uid="TcoCore.TcoState" class="text-break">Class TcoState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides basic state controller. It can be implemented using <code>IF</code>, <code>IF</code> <code>ELSIF</code> or <code>CASE</code> statement. The transition to the different state needs to be perfromed by calling
+<a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_">ChangeState(Object)</a> method. This method ensures also calling the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_">OnStateChange(Object, Object)</a> every time that state is changed. The
+<code>OnStateChange()</code>can be overloaded by customized logic that needs to be executed uppon each change of the state. The TcoState could be used like this:</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example 1</h5><p>
+<p>
+<code>_myTask()</code> is not a member of this <code>TcoState()</code>, it is restored manually to be able to trigger it in the next state.
+</p>
+<pre><code>	IF State = 10 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF
+	IF State = 20 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF</code></pre>
+</p></div>
+</example>
+</p>		
+<p>
+<example>
+<div class="NOTE"><h5>Example 2</h5><p>
+<p>
+<code>_myTask()</code> is a member of this <code>TcoState()</code>, it is restored manually using the fluent syntax to be able to trigger it in the next state.
+</p>
+<pre><code>	CASE State OF
+		10:	
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF
+		20:
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF	
+	END_CASE</code></pre>
+</p></div>
+</example>
+<p>
+	See <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_">RestoreObject(Object)</a> for more details.
+</p>
+</p>			
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -829,10 +883,10 @@ public class TcoState : TcoObject, IVortexIdentity, IVortexObject, ITwinObject, 
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L172">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L144">View Source</a>
   </span>
   <a id="TcoCore_TcoState__ctor_" data-uid="TcoCore.TcoState.#ctor*"></a>
   <h4 id="TcoCore_TcoState__ctor" data-uid="TcoCore.TcoState.#ctor">TcoState()</h4>
@@ -844,10 +898,10 @@ public class TcoState : TcoObject, IVortexIdentity, IVortexObject, ITwinObject, 
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState__ctor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.%23ctor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState__ctor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.%23ctor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L156">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L132">View Source</a>
   </span>
   <a id="TcoCore_TcoState__ctor_" data-uid="TcoCore.TcoState.#ctor*"></a>
   <h4 id="TcoCore_TcoState__ctor_Vortex_Connector_IVortexObject_System_String_System_String_" data-uid="TcoCore.TcoState.#ctor(Vortex.Connector.IVortexObject,System.String,System.String)">TcoState(IVortexObject, String, String)</h4>
@@ -884,197 +938,14 @@ public class TcoState : TcoObject, IVortexIdentity, IVortexObject, ITwinObject, 
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState___enableAutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.__enableAutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L39">View Source</a>
-  </span>
-  <h4 id="TcoCore_TcoState___enableAutoRestore" data-uid="TcoCore.TcoState.__enableAutoRestore">__enableAutoRestore</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OnlinerBool __enableAutoRestore</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.OnlinerBool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState___messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.__messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L67">View Source</a>
-  </span>
-  <h4 id="TcoCore_TcoState___messenger" data-uid="TcoCore.TcoState.__messenger">__messenger</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TcoMessenger __messenger</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="TcoCore.TcoMessenger.html">TcoMessenger</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState___State.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.__State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L14">View Source</a>
-  </span>
-  <h4 id="TcoCore_TcoState___State" data-uid="TcoCore.TcoState.__State">__State</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">OnlinerInt __State</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState__enableAutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState._enableAutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L40">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState__enableAutoRestore_" data-uid="TcoCore.TcoState._enableAutoRestore*"></a>
-  <h4 id="TcoCore_TcoState__enableAutoRestore" data-uid="TcoCore.TcoState._enableAutoRestore">_enableAutoRestore</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[RenderIgnore]
-[ReadOnly]
-public OnlinerBool _enableAutoRestore { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.OnlinerBool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState__messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoState._messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L68">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState__messenger_" data-uid="TcoCore.TcoState._messenger*"></a>
-  <h4 id="TcoCore_TcoState__messenger" data-uid="TcoCore.TcoState._messenger">_messenger</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TcoMessenger _messenger { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="TcoCore.TcoMessenger.html">TcoMessenger</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState__State.md&amp;value=---%0Auid%3A%20TcoCore.TcoState._State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L15">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState__State_" data-uid="TcoCore.TcoState._State*"></a>
-  <h4 id="TcoCore_TcoState__State" data-uid="TcoCore.TcoState._State">_State</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnlinerInt _State { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_CopyPlainToShadow_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.CopyPlainToShadow(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_CopyPlainToShadow_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.CopyPlainToShadow(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L133">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L109">View Source</a>
   </span>
   <a id="TcoCore_TcoState_CopyPlainToShadow_" data-uid="TcoCore.TcoState.CopyPlainToShadow*"></a>
   <h4 id="TcoCore_TcoState_CopyPlainToShadow_TcoCore_PlainTcoState_" data-uid="TcoCore.TcoState.CopyPlainToShadow(TcoCore.PlainTcoState)">CopyPlainToShadow(PlainTcoState)</h4>
@@ -1103,10 +974,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_CreatePlainerType.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.CreatePlainerType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_CreatePlainerType.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.CreatePlainerType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L108">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L86">View Source</a>
   </span>
   <a id="TcoCore_TcoState_CreatePlainerType_" data-uid="TcoCore.TcoState.CreatePlainerType*"></a>
   <h4 id="TcoCore_TcoState_CreatePlainerType" data-uid="TcoCore.TcoState.CreatePlainerType">CreatePlainerType()</h4>
@@ -1133,10 +1004,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_CreatePlainerType_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.CreatePlainerType(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_CreatePlainerType_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.CreatePlainerType(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L116">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L93">View Source</a>
   </span>
   <a id="TcoCore_TcoState_CreatePlainerType_" data-uid="TcoCore.TcoState.CreatePlainerType*"></a>
   <h4 id="TcoCore_TcoState_CreatePlainerType_TcoCore_PlainTcoState_" data-uid="TcoCore.TcoState.CreatePlainerType(TcoCore.PlainTcoState)">CreatePlainerType(PlainTcoState)</h4>
@@ -1180,10 +1051,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_FlushOnlineToPlain_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushOnlineToPlain(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_FlushOnlineToPlain_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushOnlineToPlain(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L150">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L126">View Source</a>
   </span>
   <a id="TcoCore_TcoState_FlushOnlineToPlain_" data-uid="TcoCore.TcoState.FlushOnlineToPlain*"></a>
   <h4 id="TcoCore_TcoState_FlushOnlineToPlain_TcoCore_PlainTcoState_" data-uid="TcoCore.TcoState.FlushOnlineToPlain(TcoCore.PlainTcoState)">FlushOnlineToPlain(PlainTcoState)</h4>
@@ -1212,10 +1083,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_FlushOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_FlushOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L144">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L120">View Source</a>
   </span>
   <a id="TcoCore_TcoState_FlushOnlineToShadow_" data-uid="TcoCore.TcoState.FlushOnlineToShadow*"></a>
   <h4 id="TcoCore_TcoState_FlushOnlineToShadow" data-uid="TcoCore.TcoState.FlushOnlineToShadow">FlushOnlineToShadow()</h4>
@@ -1227,10 +1098,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_FlushPlainToOnline_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushPlainToOnline(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_FlushPlainToOnline_TcoCore_PlainTcoState_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushPlainToOnline(TcoCore.PlainTcoState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L127">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L103">View Source</a>
   </span>
   <a id="TcoCore_TcoState_FlushPlainToOnline_" data-uid="TcoCore.TcoState.FlushPlainToOnline*"></a>
   <h4 id="TcoCore_TcoState_FlushPlainToOnline_TcoCore_PlainTcoState_" data-uid="TcoCore.TcoState.FlushPlainToOnline(TcoCore.PlainTcoState)">FlushPlainToOnline(PlainTcoState)</h4>
@@ -1259,10 +1130,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_FlushShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_FlushShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.FlushShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L138">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L114">View Source</a>
   </span>
   <a id="TcoCore_TcoState_FlushShadowToOnline_" data-uid="TcoCore.TcoState.FlushShadowToOnline*"></a>
   <h4 id="TcoCore_TcoState_FlushShadowToOnline" data-uid="TcoCore.TcoState.FlushShadowToOnline">FlushShadowToOnline()</h4>
@@ -1274,10 +1145,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_LazyOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.LazyOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_LazyOnlineToShadow.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.LazyOnlineToShadow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L92">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L76">View Source</a>
   </span>
   <a id="TcoCore_TcoState_LazyOnlineToShadow_" data-uid="TcoCore.TcoState.LazyOnlineToShadow*"></a>
   <h4 id="TcoCore_TcoState_LazyOnlineToShadow" data-uid="TcoCore.TcoState.LazyOnlineToShadow">LazyOnlineToShadow()</h4>
@@ -1289,10 +1160,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_LazyShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.LazyShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_LazyShadowToOnline.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.LazyShadowToOnline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L100">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L81">View Source</a>
   </span>
   <a id="TcoCore_TcoState_LazyShadowToOnline_" data-uid="TcoCore.TcoState.LazyShadowToOnline*"></a>
   <h4 id="TcoCore_TcoState_LazyShadowToOnline" data-uid="TcoCore.TcoState.LazyShadowToOnline">LazyShadowToOnline()</h4>
@@ -1304,10 +1175,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_PexConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PexConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L125">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L101">View Source</a>
   </span>
   <a id="TcoCore_TcoState_PexConstructor_" data-uid="TcoCore.TcoState.PexConstructor*"></a>
   <h4 id="TcoCore_TcoState_PexConstructor_Vortex_Connector_IVortexObject_System_String_System_String_" data-uid="TcoCore.TcoState.PexConstructor(Vortex.Connector.IVortexObject,System.String,System.String)">PexConstructor(IVortexObject, String, String)</h4>
@@ -1346,10 +1217,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_PexConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PexConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L126">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L102">View Source</a>
   </span>
   <a id="TcoCore_TcoState_PexConstructorParameterless_" data-uid="TcoCore.TcoState.PexConstructorParameterless*"></a>
   <h4 id="TcoCore_TcoState_PexConstructorParameterless" data-uid="TcoCore.TcoState.PexConstructorParameterless">PexConstructorParameterless()</h4>
@@ -1361,10 +1232,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_PexPreConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexPreConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PexPreConstructor_Vortex_Connector_IVortexObject_System_String_System_String_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexPreConstructor(Vortex.Connector.IVortexObject%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L123">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L99">View Source</a>
   </span>
   <a id="TcoCore_TcoState_PexPreConstructor_" data-uid="TcoCore.TcoState.PexPreConstructor*"></a>
   <h4 id="TcoCore_TcoState_PexPreConstructor_Vortex_Connector_IVortexObject_System_String_System_String_" data-uid="TcoCore.TcoState.PexPreConstructor(Vortex.Connector.IVortexObject,System.String,System.String)">PexPreConstructor(IVortexObject, String, String)</h4>
@@ -1403,10 +1274,10 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_PexPreConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexPreConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PexPreConstructorParameterless.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PexPreConstructorParameterless%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L124">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L100">View Source</a>
   </span>
   <a id="TcoCore_TcoState_PexPreConstructorParameterless_" data-uid="TcoCore.TcoState.PexPreConstructorParameterless*"></a>
   <h4 id="TcoCore_TcoState_PexPreConstructorParameterless" data-uid="TcoCore.TcoState.PexPreConstructorParameterless">PexPreConstructorParameterless()</h4>
@@ -1416,192 +1287,6 @@ public OnlinerBool _enableAutoRestore { get; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void PexPreConstructorParameterless()</code></pre>
   </div>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_TcoCore_IShadowTcoState__enableAutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.TcoCore%23IShadowTcoState%23_enableAutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L58">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState_TcoCore_IShadowTcoState__enableAutoRestore_" data-uid="TcoCore.TcoState.TcoCore#IShadowTcoState#_enableAutoRestore*"></a>
-  <h4 id="TcoCore_TcoState_TcoCore_IShadowTcoState__enableAutoRestore" data-uid="TcoCore.TcoState.TcoCore#IShadowTcoState#_enableAutoRestore">IShadowTcoState._enableAutoRestore</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[RenderIgnore]
-[ReadOnly]
-IShadowBool IShadowTcoState._enableAutoRestore { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.Shadows.IShadowBool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_TcoCore_IShadowTcoState__messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.TcoCore%23IShadowTcoState%23_messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L84">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState_TcoCore_IShadowTcoState__messenger_" data-uid="TcoCore.TcoState.TcoCore#IShadowTcoState#_messenger*"></a>
-  <h4 id="TcoCore_TcoState_TcoCore_IShadowTcoState__messenger" data-uid="TcoCore.TcoState.TcoCore#IShadowTcoState#_messenger">IShadowTcoState._messenger</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IShadowTcoMessenger IShadowTcoState._messenger { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="TcoCore.IShadowTcoMessenger.html">IShadowTcoMessenger</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_TcoCore_IShadowTcoState__State.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.TcoCore%23IShadowTcoState%23_State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L31">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState_TcoCore_IShadowTcoState__State_" data-uid="TcoCore.TcoState.TcoCore#IShadowTcoState#_State*"></a>
-  <h4 id="TcoCore_TcoState_TcoCore_IShadowTcoState__State" data-uid="TcoCore.TcoState.TcoCore#IShadowTcoState#_State">IShadowTcoState._State</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IShadowInt IShadowTcoState._State { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.Shadows.IShadowInt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_TcoCore_ITcoState__enableAutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.TcoCore%23ITcoState%23_enableAutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L49">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState_TcoCore_ITcoState__enableAutoRestore_" data-uid="TcoCore.TcoState.TcoCore#ITcoState#_enableAutoRestore*"></a>
-  <h4 id="TcoCore_TcoState_TcoCore_ITcoState__enableAutoRestore" data-uid="TcoCore.TcoState.TcoCore#ITcoState#_enableAutoRestore">ITcoState._enableAutoRestore</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[RenderIgnore]
-[ReadOnly]
-IOnlineBool ITcoState._enableAutoRestore { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.Online.IOnlineBool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_TcoCore_ITcoState__messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.TcoCore%23ITcoState%23_messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L76">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState_TcoCore_ITcoState__messenger_" data-uid="TcoCore.TcoState.TcoCore#ITcoState#_messenger*"></a>
-  <h4 id="TcoCore_TcoState_TcoCore_ITcoState__messenger" data-uid="TcoCore.TcoState.TcoCore#ITcoState#_messenger">ITcoState._messenger</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ITcoMessenger ITcoState._messenger { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="TcoCore.ITcoMessenger.html">ITcoMessenger</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_TcoCore_ITcoState__State.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.TcoCore%23ITcoState%23_State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L23">View Source</a>
-  </span>
-  <a id="TcoCore_TcoState_TcoCore_ITcoState__State_" data-uid="TcoCore.TcoState.TcoCore#ITcoState#_State*"></a>
-  <h4 id="TcoCore_TcoState_TcoCore_ITcoState__State" data-uid="TcoCore.TcoState.TcoCore#ITcoState#_State">ITcoState._State</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IOnlineInt ITcoState._State { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vortex.Connector.ValueTypes.Online.IOnlineInt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">Vortex.Connector.Identity.IVortexIdentity</span>
@@ -1646,6 +1331,10 @@ IOnlineBool ITcoState._enableAutoRestore { get; }</code></pre>
   <div>
       <a class="xref" href="TcoCore.IVortexObjectExtensions.html#TcoCore_IVortexObjectExtensions_GetChildren__1_Vortex_Connector_IVortexObject_System_Collections_Generic_IEnumerable_System_Object__">IVortexObjectExtensions.GetChildren&lt;T&gt;(IVortexObject, IEnumerable&lt;Object&gt;)</a>
   </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="TcoCore.TcoState.PlcTcoState.html">TcoState.PlcTcoState</a></div>
+  </div>
 </article>
           </div>
           
@@ -1654,10 +1343,10 @@ IOnlineBool ITcoState._enableAutoRestore { get; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L73" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -2022,45 +2022,6 @@ references:
   commentId: T:TcoCore.IShadowTcoState
   fullName: TcoCore.IShadowTcoState
   nameWithType: IShadowTcoState
-- uid: TcoCore.IShadowTcoState._enableAutoRestore
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState__enableAutoRestore
-  commentId: P:TcoCore.IShadowTcoState._enableAutoRestore
-  fullName: TcoCore.IShadowTcoState._enableAutoRestore
-  nameWithType: IShadowTcoState._enableAutoRestore
-- uid: TcoCore.IShadowTcoState._enableAutoRestore*
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState__enableAutoRestore_
-  commentId: Overload:TcoCore.IShadowTcoState._enableAutoRestore
-  isSpec: "True"
-  fullName: TcoCore.IShadowTcoState._enableAutoRestore
-  nameWithType: IShadowTcoState._enableAutoRestore
-- uid: TcoCore.IShadowTcoState._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState__messenger
-  commentId: P:TcoCore.IShadowTcoState._messenger
-  fullName: TcoCore.IShadowTcoState._messenger
-  nameWithType: IShadowTcoState._messenger
-- uid: TcoCore.IShadowTcoState._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState__messenger_
-  commentId: Overload:TcoCore.IShadowTcoState._messenger
-  isSpec: "True"
-  fullName: TcoCore.IShadowTcoState._messenger
-  nameWithType: IShadowTcoState._messenger
-- uid: TcoCore.IShadowTcoState._State
-  name: _State
-  href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState__State
-  commentId: P:TcoCore.IShadowTcoState._State
-  fullName: TcoCore.IShadowTcoState._State
-  nameWithType: IShadowTcoState._State
-- uid: TcoCore.IShadowTcoState._State*
-  name: _State
-  href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState__State_
-  commentId: Overload:TcoCore.IShadowTcoState._State
-  isSpec: "True"
-  fullName: TcoCore.IShadowTcoState._State
-  nameWithType: IShadowTcoState._State
 - uid: TcoCore.IShadowTcoState.CopyPlainToShadow(TcoCore.PlainTcoState)
   name: CopyPlainToShadow(PlainTcoState)
   href: api/TcoCore/TcoCore.IShadowTcoState.html#TcoCore_IShadowTcoState_CopyPlainToShadow_TcoCore_PlainTcoState_
@@ -2164,32 +2125,6 @@ references:
   commentId: T:TcoCore.IShadowTcoTask
   fullName: TcoCore.IShadowTcoTask
   nameWithType: IShadowTcoTask
-- uid: TcoCore.IShadowTcoTask._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.IShadowTcoTask.html#TcoCore_IShadowTcoTask__messenger
-  commentId: P:TcoCore.IShadowTcoTask._messenger
-  fullName: TcoCore.IShadowTcoTask._messenger
-  nameWithType: IShadowTcoTask._messenger
-- uid: TcoCore.IShadowTcoTask._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.IShadowTcoTask.html#TcoCore_IShadowTcoTask__messenger_
-  commentId: Overload:TcoCore.IShadowTcoTask._messenger
-  isSpec: "True"
-  fullName: TcoCore.IShadowTcoTask._messenger
-  nameWithType: IShadowTcoTask._messenger
-- uid: TcoCore.IShadowTcoTask._nextExpectedCycle
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.IShadowTcoTask.html#TcoCore_IShadowTcoTask__nextExpectedCycle
-  commentId: P:TcoCore.IShadowTcoTask._nextExpectedCycle
-  fullName: TcoCore.IShadowTcoTask._nextExpectedCycle
-  nameWithType: IShadowTcoTask._nextExpectedCycle
-- uid: TcoCore.IShadowTcoTask._nextExpectedCycle*
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.IShadowTcoTask.html#TcoCore_IShadowTcoTask__nextExpectedCycle_
-  commentId: Overload:TcoCore.IShadowTcoTask._nextExpectedCycle
-  isSpec: "True"
-  fullName: TcoCore.IShadowTcoTask._nextExpectedCycle
-  nameWithType: IShadowTcoTask._nextExpectedCycle
 - uid: TcoCore.IShadowTcoTask._taskState
   name: _taskState
   href: api/TcoCore/TcoCore.IShadowTcoTask.html#TcoCore_IShadowTcoTask__taskState
@@ -3037,45 +2972,6 @@ references:
   commentId: T:TcoCore.ITcoState
   fullName: TcoCore.ITcoState
   nameWithType: ITcoState
-- uid: TcoCore.ITcoState._enableAutoRestore
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState__enableAutoRestore
-  commentId: P:TcoCore.ITcoState._enableAutoRestore
-  fullName: TcoCore.ITcoState._enableAutoRestore
-  nameWithType: ITcoState._enableAutoRestore
-- uid: TcoCore.ITcoState._enableAutoRestore*
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState__enableAutoRestore_
-  commentId: Overload:TcoCore.ITcoState._enableAutoRestore
-  isSpec: "True"
-  fullName: TcoCore.ITcoState._enableAutoRestore
-  nameWithType: ITcoState._enableAutoRestore
-- uid: TcoCore.ITcoState._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState__messenger
-  commentId: P:TcoCore.ITcoState._messenger
-  fullName: TcoCore.ITcoState._messenger
-  nameWithType: ITcoState._messenger
-- uid: TcoCore.ITcoState._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState__messenger_
-  commentId: Overload:TcoCore.ITcoState._messenger
-  isSpec: "True"
-  fullName: TcoCore.ITcoState._messenger
-  nameWithType: ITcoState._messenger
-- uid: TcoCore.ITcoState._State
-  name: _State
-  href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState__State
-  commentId: P:TcoCore.ITcoState._State
-  fullName: TcoCore.ITcoState._State
-  nameWithType: ITcoState._State
-- uid: TcoCore.ITcoState._State*
-  name: _State
-  href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState__State_
-  commentId: Overload:TcoCore.ITcoState._State
-  isSpec: "True"
-  fullName: TcoCore.ITcoState._State
-  nameWithType: ITcoState._State
 - uid: TcoCore.ITcoState.CreatePlainerType
   name: CreatePlainerType()
   href: api/TcoCore/TcoCore.ITcoState.html#TcoCore_ITcoState_CreatePlainerType
@@ -3205,32 +3101,6 @@ references:
   commentId: T:TcoCore.ITcoTask
   fullName: TcoCore.ITcoTask
   nameWithType: ITcoTask
-- uid: TcoCore.ITcoTask._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.ITcoTask.html#TcoCore_ITcoTask__messenger
-  commentId: P:TcoCore.ITcoTask._messenger
-  fullName: TcoCore.ITcoTask._messenger
-  nameWithType: ITcoTask._messenger
-- uid: TcoCore.ITcoTask._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.ITcoTask.html#TcoCore_ITcoTask__messenger_
-  commentId: Overload:TcoCore.ITcoTask._messenger
-  isSpec: "True"
-  fullName: TcoCore.ITcoTask._messenger
-  nameWithType: ITcoTask._messenger
-- uid: TcoCore.ITcoTask._nextExpectedCycle
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.ITcoTask.html#TcoCore_ITcoTask__nextExpectedCycle
-  commentId: P:TcoCore.ITcoTask._nextExpectedCycle
-  fullName: TcoCore.ITcoTask._nextExpectedCycle
-  nameWithType: ITcoTask._nextExpectedCycle
-- uid: TcoCore.ITcoTask._nextExpectedCycle*
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.ITcoTask.html#TcoCore_ITcoTask__nextExpectedCycle_
-  commentId: Overload:TcoCore.ITcoTask._nextExpectedCycle
-  isSpec: "True"
-  fullName: TcoCore.ITcoTask._nextExpectedCycle
-  nameWithType: ITcoTask._nextExpectedCycle
 - uid: TcoCore.ITcoTask._taskState
   name: _taskState
   href: api/TcoCore/TcoCore.ITcoTask.html#TcoCore_ITcoTask__taskState
@@ -5209,63 +5079,6 @@ references:
   isSpec: "True"
   fullName: TcoCore.PlainTcoState.PlainTcoState
   nameWithType: PlainTcoState.PlainTcoState
-- uid: TcoCore.PlainTcoState.__enableAutoRestore
-  name: __enableAutoRestore
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState___enableAutoRestore
-  commentId: F:TcoCore.PlainTcoState.__enableAutoRestore
-  fullName: TcoCore.PlainTcoState.__enableAutoRestore
-  nameWithType: PlainTcoState.__enableAutoRestore
-- uid: TcoCore.PlainTcoState.__messenger
-  name: __messenger
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState___messenger
-  commentId: F:TcoCore.PlainTcoState.__messenger
-  fullName: TcoCore.PlainTcoState.__messenger
-  nameWithType: PlainTcoState.__messenger
-- uid: TcoCore.PlainTcoState.__State
-  name: __State
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState___State
-  commentId: F:TcoCore.PlainTcoState.__State
-  fullName: TcoCore.PlainTcoState.__State
-  nameWithType: PlainTcoState.__State
-- uid: TcoCore.PlainTcoState._enableAutoRestore
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState__enableAutoRestore
-  commentId: P:TcoCore.PlainTcoState._enableAutoRestore
-  fullName: TcoCore.PlainTcoState._enableAutoRestore
-  nameWithType: PlainTcoState._enableAutoRestore
-- uid: TcoCore.PlainTcoState._enableAutoRestore*
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState__enableAutoRestore_
-  commentId: Overload:TcoCore.PlainTcoState._enableAutoRestore
-  isSpec: "True"
-  fullName: TcoCore.PlainTcoState._enableAutoRestore
-  nameWithType: PlainTcoState._enableAutoRestore
-- uid: TcoCore.PlainTcoState._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState__messenger
-  commentId: P:TcoCore.PlainTcoState._messenger
-  fullName: TcoCore.PlainTcoState._messenger
-  nameWithType: PlainTcoState._messenger
-- uid: TcoCore.PlainTcoState._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState__messenger_
-  commentId: Overload:TcoCore.PlainTcoState._messenger
-  isSpec: "True"
-  fullName: TcoCore.PlainTcoState._messenger
-  nameWithType: PlainTcoState._messenger
-- uid: TcoCore.PlainTcoState._State
-  name: _State
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState__State
-  commentId: P:TcoCore.PlainTcoState._State
-  fullName: TcoCore.PlainTcoState._State
-  nameWithType: PlainTcoState._State
-- uid: TcoCore.PlainTcoState._State*
-  name: _State
-  href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState__State_
-  commentId: Overload:TcoCore.PlainTcoState._State
-  isSpec: "True"
-  fullName: TcoCore.PlainTcoState._State
-  nameWithType: PlainTcoState._State
 - uid: TcoCore.PlainTcoState.CopyCyclicToPlain(TcoCore.ITcoState)
   name: CopyCyclicToPlain(ITcoState)
   href: api/TcoCore/TcoCore.PlainTcoState.html#TcoCore_PlainTcoState_CopyCyclicToPlain_TcoCore_ITcoState_
@@ -5487,50 +5300,12 @@ references:
   isSpec: "True"
   fullName: TcoCore.PlainTcoTask.PlainTcoTask
   nameWithType: PlainTcoTask.PlainTcoTask
-- uid: TcoCore.PlainTcoTask.__messenger
-  name: __messenger
-  href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask___messenger
-  commentId: F:TcoCore.PlainTcoTask.__messenger
-  fullName: TcoCore.PlainTcoTask.__messenger
-  nameWithType: PlainTcoTask.__messenger
-- uid: TcoCore.PlainTcoTask.__nextExpectedCycle
-  name: __nextExpectedCycle
-  href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask___nextExpectedCycle
-  commentId: F:TcoCore.PlainTcoTask.__nextExpectedCycle
-  fullName: TcoCore.PlainTcoTask.__nextExpectedCycle
-  nameWithType: PlainTcoTask.__nextExpectedCycle
 - uid: TcoCore.PlainTcoTask.__taskState
   name: __taskState
   href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask___taskState
   commentId: F:TcoCore.PlainTcoTask.__taskState
   fullName: TcoCore.PlainTcoTask.__taskState
   nameWithType: PlainTcoTask.__taskState
-- uid: TcoCore.PlainTcoTask._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask__messenger
-  commentId: P:TcoCore.PlainTcoTask._messenger
-  fullName: TcoCore.PlainTcoTask._messenger
-  nameWithType: PlainTcoTask._messenger
-- uid: TcoCore.PlainTcoTask._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask__messenger_
-  commentId: Overload:TcoCore.PlainTcoTask._messenger
-  isSpec: "True"
-  fullName: TcoCore.PlainTcoTask._messenger
-  nameWithType: PlainTcoTask._messenger
-- uid: TcoCore.PlainTcoTask._nextExpectedCycle
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask__nextExpectedCycle
-  commentId: P:TcoCore.PlainTcoTask._nextExpectedCycle
-  fullName: TcoCore.PlainTcoTask._nextExpectedCycle
-  nameWithType: PlainTcoTask._nextExpectedCycle
-- uid: TcoCore.PlainTcoTask._nextExpectedCycle*
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask__nextExpectedCycle_
-  commentId: Overload:TcoCore.PlainTcoTask._nextExpectedCycle
-  isSpec: "True"
-  fullName: TcoCore.PlainTcoTask._nextExpectedCycle
-  nameWithType: PlainTcoTask._nextExpectedCycle
 - uid: TcoCore.PlainTcoTask._taskState
   name: _taskState
   href: api/TcoCore/TcoCore.PlainTcoTask.html#TcoCore_PlainTcoTask__taskState
@@ -6147,6 +5922,42 @@ references:
   isSpec: "True"
   fullName: TcoCore.StepDetails.PlcStepDetails.PlcStepDetails
   nameWithType: StepDetails.PlcStepDetails.PlcStepDetails
+- uid: TcoCore.StepDetails.PlcStepDetails.Description
+  name: Description
+  href: api/TcoCore/TcoCore.StepDetails.PlcStepDetails.html#TcoCore_StepDetails_PlcStepDetails_Description
+  commentId: F:TcoCore.StepDetails.PlcStepDetails.Description
+  fullName: TcoCore.StepDetails.PlcStepDetails.Description
+  nameWithType: StepDetails.PlcStepDetails.Description
+- uid: TcoCore.StepDetails.PlcStepDetails.Duration
+  name: Duration
+  href: api/TcoCore/TcoCore.StepDetails.PlcStepDetails.html#TcoCore_StepDetails_PlcStepDetails_Duration
+  commentId: F:TcoCore.StepDetails.PlcStepDetails.Duration
+  fullName: TcoCore.StepDetails.PlcStepDetails.Duration
+  nameWithType: StepDetails.PlcStepDetails.Duration
+- uid: TcoCore.StepDetails.PlcStepDetails.Enabled
+  name: Enabled
+  href: api/TcoCore/TcoCore.StepDetails.PlcStepDetails.html#TcoCore_StepDetails_PlcStepDetails_Enabled
+  commentId: F:TcoCore.StepDetails.PlcStepDetails.Enabled
+  fullName: TcoCore.StepDetails.PlcStepDetails.Enabled
+  nameWithType: StepDetails.PlcStepDetails.Enabled
+- uid: TcoCore.StepDetails.PlcStepDetails.ID
+  name: ID
+  href: api/TcoCore/TcoCore.StepDetails.PlcStepDetails.html#TcoCore_StepDetails_PlcStepDetails_ID
+  commentId: F:TcoCore.StepDetails.PlcStepDetails.ID
+  fullName: TcoCore.StepDetails.PlcStepDetails.ID
+  nameWithType: StepDetails.PlcStepDetails.ID
+- uid: TcoCore.StepDetails.PlcStepDetails.Order
+  name: Order
+  href: api/TcoCore/TcoCore.StepDetails.PlcStepDetails.html#TcoCore_StepDetails_PlcStepDetails_Order
+  commentId: F:TcoCore.StepDetails.PlcStepDetails.Order
+  fullName: TcoCore.StepDetails.PlcStepDetails.Order
+  nameWithType: StepDetails.PlcStepDetails.Order
+- uid: TcoCore.StepDetails.PlcStepDetails.Status
+  name: Status
+  href: api/TcoCore/TcoCore.StepDetails.PlcStepDetails.html#TcoCore_StepDetails_PlcStepDetails_Status
+  commentId: F:TcoCore.StepDetails.PlcStepDetails.Status
+  fullName: TcoCore.StepDetails.PlcStepDetails.Status
+  nameWithType: StepDetails.PlcStepDetails.Status
 - uid: TcoCore.StepDetails.Status
   name: Status
   href: api/TcoCore/TcoCore.StepDetails.html#TcoCore_StepDetails_Status
@@ -7093,6 +6904,134 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoContext.PlcTcoContext.PlcTcoContext
   nameWithType: TcoContext.PlcTcoContext.PlcTcoContext
+- uid: TcoCore.TcoContext.PlcTcoContext._endCycleCount
+  name: _endCycleCount
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__endCycleCount
+  commentId: F:TcoCore.TcoContext.PlcTcoContext._endCycleCount
+  fullName: TcoCore.TcoContext.PlcTcoContext._endCycleCount
+  nameWithType: TcoContext.PlcTcoContext._endCycleCount
+- uid: TcoCore.TcoContext.PlcTcoContext._Identity
+  name: _Identity
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__Identity
+  commentId: F:TcoCore.TcoContext.PlcTcoContext._Identity
+  fullName: TcoCore.TcoContext.PlcTcoContext._Identity
+  nameWithType: TcoContext.PlcTcoContext._Identity
+- uid: TcoCore.TcoContext.PlcTcoContext._Messenger
+  name: _Messenger
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__Messenger
+  commentId: F:TcoCore.TcoContext.PlcTcoContext._Messenger
+  fullName: TcoCore.TcoContext.PlcTcoContext._Messenger
+  nameWithType: TcoContext.PlcTcoContext._Messenger
+- uid: TcoCore.TcoContext.PlcTcoContext._startCycleCount
+  name: _startCycleCount
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__startCycleCount
+  commentId: F:TcoCore.TcoContext.PlcTcoContext._startCycleCount
+  fullName: TcoCore.TcoContext.PlcTcoContext._startCycleCount
+  nameWithType: TcoContext.PlcTcoContext._startCycleCount
+- uid: TcoCore.TcoContext.PlcTcoContext.Close
+  name: Close()
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Close
+  commentId: M:TcoCore.TcoContext.PlcTcoContext.Close
+  fullName: TcoCore.TcoContext.PlcTcoContext.Close()
+  nameWithType: TcoContext.PlcTcoContext.Close()
+- uid: TcoCore.TcoContext.PlcTcoContext.Close*
+  name: Close
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Close_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.Close
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.Close
+  nameWithType: TcoContext.PlcTcoContext.Close
+- uid: TcoCore.TcoContext.PlcTcoContext.Context
+  name: Context
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Context
+  commentId: P:TcoCore.TcoContext.PlcTcoContext.Context
+  fullName: TcoCore.TcoContext.PlcTcoContext.Context
+  nameWithType: TcoContext.PlcTcoContext.Context
+- uid: TcoCore.TcoContext.PlcTcoContext.Context*
+  name: Context
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Context_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.Context
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.Context
+  nameWithType: TcoContext.PlcTcoContext.Context
+- uid: TcoCore.TcoContext.PlcTcoContext.EndCycleCount
+  name: EndCycleCount
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_EndCycleCount
+  commentId: P:TcoCore.TcoContext.PlcTcoContext.EndCycleCount
+  fullName: TcoCore.TcoContext.PlcTcoContext.EndCycleCount
+  nameWithType: TcoContext.PlcTcoContext.EndCycleCount
+- uid: TcoCore.TcoContext.PlcTcoContext.EndCycleCount*
+  name: EndCycleCount
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_EndCycleCount_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.EndCycleCount
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.EndCycleCount
+  nameWithType: TcoContext.PlcTcoContext.EndCycleCount
+- uid: TcoCore.TcoContext.PlcTcoContext.Identity
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Identity
+  commentId: P:TcoCore.TcoContext.PlcTcoContext.Identity
+  fullName: TcoCore.TcoContext.PlcTcoContext.Identity
+  nameWithType: TcoContext.PlcTcoContext.Identity
+- uid: TcoCore.TcoContext.PlcTcoContext.Identity*
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Identity_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.Identity
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.Identity
+  nameWithType: TcoContext.PlcTcoContext.Identity
+- uid: TcoCore.TcoContext.PlcTcoContext.Main
+  name: Main()
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Main
+  commentId: M:TcoCore.TcoContext.PlcTcoContext.Main
+  fullName: TcoCore.TcoContext.PlcTcoContext.Main()
+  nameWithType: TcoContext.PlcTcoContext.Main()
+- uid: TcoCore.TcoContext.PlcTcoContext.Main*
+  name: Main
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Main_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.Main
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.Main
+  nameWithType: TcoContext.PlcTcoContext.Main
+- uid: TcoCore.TcoContext.PlcTcoContext.Open
+  name: Open()
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Open
+  commentId: M:TcoCore.TcoContext.PlcTcoContext.Open
+  fullName: TcoCore.TcoContext.PlcTcoContext.Open()
+  nameWithType: TcoContext.PlcTcoContext.Open()
+- uid: TcoCore.TcoContext.PlcTcoContext.Open*
+  name: Open
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Open_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.Open
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.Open
+  nameWithType: TcoContext.PlcTcoContext.Open
+- uid: TcoCore.TcoContext.PlcTcoContext.Run
+  name: Run()
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run
+  commentId: M:TcoCore.TcoContext.PlcTcoContext.Run
+  fullName: TcoCore.TcoContext.PlcTcoContext.Run()
+  nameWithType: TcoContext.PlcTcoContext.Run()
+- uid: TcoCore.TcoContext.PlcTcoContext.Run*
+  name: Run
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.Run
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.Run
+  nameWithType: TcoContext.PlcTcoContext.Run
+- uid: TcoCore.TcoContext.PlcTcoContext.StartCycleCount
+  name: StartCycleCount
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_StartCycleCount
+  commentId: P:TcoCore.TcoContext.PlcTcoContext.StartCycleCount
+  fullName: TcoCore.TcoContext.PlcTcoContext.StartCycleCount
+  nameWithType: TcoContext.PlcTcoContext.StartCycleCount
+- uid: TcoCore.TcoContext.PlcTcoContext.StartCycleCount*
+  name: StartCycleCount
+  href: api/TcoCore/TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_StartCycleCount_
+  commentId: Overload:TcoCore.TcoContext.PlcTcoContext.StartCycleCount
+  isSpec: "True"
+  fullName: TcoCore.TcoContext.PlcTcoContext.StartCycleCount
+  nameWithType: TcoContext.PlcTcoContext.StartCycleCount
 - uid: TcoCore.TcoContext.Symbol
   name: Symbol
   href: api/TcoCore/TcoCore.TcoContext.html#TcoCore_TcoContext_Symbol
@@ -7923,6 +7862,36 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoMessage.PlcTcoMessage.PlcTcoMessage
   nameWithType: TcoMessage.PlcTcoMessage.PlcTcoMessage
+- uid: TcoCore.TcoMessage.PlcTcoMessage.Category
+  name: Category
+  href: api/TcoCore/TcoCore.TcoMessage.PlcTcoMessage.html#TcoCore_TcoMessage_PlcTcoMessage_Category
+  commentId: F:TcoCore.TcoMessage.PlcTcoMessage.Category
+  fullName: TcoCore.TcoMessage.PlcTcoMessage.Category
+  nameWithType: TcoMessage.PlcTcoMessage.Category
+- uid: TcoCore.TcoMessage.PlcTcoMessage.Cycle
+  name: Cycle
+  href: api/TcoCore/TcoCore.TcoMessage.PlcTcoMessage.html#TcoCore_TcoMessage_PlcTcoMessage_Cycle
+  commentId: F:TcoCore.TcoMessage.PlcTcoMessage.Cycle
+  fullName: TcoCore.TcoMessage.PlcTcoMessage.Cycle
+  nameWithType: TcoMessage.PlcTcoMessage.Cycle
+- uid: TcoCore.TcoMessage.PlcTcoMessage.Identity
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoMessage.PlcTcoMessage.html#TcoCore_TcoMessage_PlcTcoMessage_Identity
+  commentId: F:TcoCore.TcoMessage.PlcTcoMessage.Identity
+  fullName: TcoCore.TcoMessage.PlcTcoMessage.Identity
+  nameWithType: TcoMessage.PlcTcoMessage.Identity
+- uid: TcoCore.TcoMessage.PlcTcoMessage.Text
+  name: Text
+  href: api/TcoCore/TcoCore.TcoMessage.PlcTcoMessage.html#TcoCore_TcoMessage_PlcTcoMessage_Text
+  commentId: F:TcoCore.TcoMessage.PlcTcoMessage.Text
+  fullName: TcoCore.TcoMessage.PlcTcoMessage.Text
+  nameWithType: TcoMessage.PlcTcoMessage.Text
+- uid: TcoCore.TcoMessage.PlcTcoMessage.TimeStamp
+  name: TimeStamp
+  href: api/TcoCore/TcoCore.TcoMessage.PlcTcoMessage.html#TcoCore_TcoMessage_PlcTcoMessage_TimeStamp
+  commentId: F:TcoCore.TcoMessage.PlcTcoMessage.TimeStamp
+  fullName: TcoCore.TcoMessage.PlcTcoMessage.TimeStamp
+  nameWithType: TcoMessage.PlcTcoMessage.TimeStamp
 - uid: TcoCore.TcoMessage.Symbol
   name: Symbol
   href: api/TcoCore/TcoCore.TcoMessage.html#TcoCore_TcoMessage_Symbol
@@ -8616,6 +8585,24 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoMessenger.PlcTcoMessenger.PlcTcoMessenger
   nameWithType: TcoMessenger.PlcTcoMessenger.PlcTcoMessenger
+- uid: TcoCore.TcoMessenger.PlcTcoMessenger._contextIdentity
+  name: _contextIdentity
+  href: api/TcoCore/TcoCore.TcoMessenger.PlcTcoMessenger.html#TcoCore_TcoMessenger_PlcTcoMessenger__contextIdentity
+  commentId: F:TcoCore.TcoMessenger.PlcTcoMessenger._contextIdentity
+  fullName: TcoCore.TcoMessenger.PlcTcoMessenger._contextIdentity
+  nameWithType: TcoMessenger.PlcTcoMessenger._contextIdentity
+- uid: TcoCore.TcoMessenger.PlcTcoMessenger._mime
+  name: _mime
+  href: api/TcoCore/TcoCore.TcoMessenger.PlcTcoMessenger.html#TcoCore_TcoMessenger_PlcTcoMessenger__mime
+  commentId: F:TcoCore.TcoMessenger.PlcTcoMessenger._mime
+  fullName: TcoCore.TcoMessenger.PlcTcoMessenger._mime
+  nameWithType: TcoMessenger.PlcTcoMessenger._mime
+- uid: TcoCore.TcoMessenger.PlcTcoMessenger._Parent
+  name: _Parent
+  href: api/TcoCore/TcoCore.TcoMessenger.PlcTcoMessenger.html#TcoCore_TcoMessenger_PlcTcoMessenger__Parent
+  commentId: F:TcoCore.TcoMessenger.PlcTcoMessenger._Parent
+  fullName: TcoCore.TcoMessenger.PlcTcoMessenger._Parent
+  nameWithType: TcoMessenger.PlcTcoMessenger._Parent
 - uid: TcoCore.TcoMessenger.PlcTcoMessenger.Debug(System.Object)
   name: Debug(Object)
   href: api/TcoCore/TcoCore.TcoMessenger.PlcTcoMessenger.html#TcoCore_TcoMessenger_PlcTcoMessenger_Debug_System_Object_
@@ -9279,6 +9266,63 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoObject.PlcTcoObject.PlcTcoObject
   nameWithType: TcoObject.PlcTcoObject.PlcTcoObject
+- uid: TcoCore.TcoObject.PlcTcoObject._Identity
+  name: _Identity
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__Identity
+  commentId: F:TcoCore.TcoObject.PlcTcoObject._Identity
+  fullName: TcoCore.TcoObject.PlcTcoObject._Identity
+  nameWithType: TcoObject.PlcTcoObject._Identity
+- uid: TcoCore.TcoObject.PlcTcoObject._messenger
+  name: _messenger
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__messenger
+  commentId: F:TcoCore.TcoObject.PlcTcoObject._messenger
+  fullName: TcoCore.TcoObject.PlcTcoObject._messenger
+  nameWithType: TcoObject.PlcTcoObject._messenger
+- uid: TcoCore.TcoObject.PlcTcoObject._Parent
+  name: _Parent
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__Parent
+  commentId: F:TcoCore.TcoObject.PlcTcoObject._Parent
+  fullName: TcoCore.TcoObject.PlcTcoObject._Parent
+  nameWithType: TcoObject.PlcTcoObject._Parent
+- uid: TcoCore.TcoObject.PlcTcoObject.Context
+  name: Context
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Context
+  commentId: P:TcoCore.TcoObject.PlcTcoObject.Context
+  fullName: TcoCore.TcoObject.PlcTcoObject.Context
+  nameWithType: TcoObject.PlcTcoObject.Context
+- uid: TcoCore.TcoObject.PlcTcoObject.Context*
+  name: Context
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Context_
+  commentId: Overload:TcoCore.TcoObject.PlcTcoObject.Context
+  isSpec: "True"
+  fullName: TcoCore.TcoObject.PlcTcoObject.Context
+  nameWithType: TcoObject.PlcTcoObject.Context
+- uid: TcoCore.TcoObject.PlcTcoObject.Identity
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Identity
+  commentId: P:TcoCore.TcoObject.PlcTcoObject.Identity
+  fullName: TcoCore.TcoObject.PlcTcoObject.Identity
+  nameWithType: TcoObject.PlcTcoObject.Identity
+- uid: TcoCore.TcoObject.PlcTcoObject.Identity*
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Identity_
+  commentId: Overload:TcoCore.TcoObject.PlcTcoObject.Identity
+  isSpec: "True"
+  fullName: TcoCore.TcoObject.PlcTcoObject.Identity
+  nameWithType: TcoObject.PlcTcoObject.Identity
+- uid: TcoCore.TcoObject.PlcTcoObject.Messenger
+  name: Messenger
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Messenger
+  commentId: P:TcoCore.TcoObject.PlcTcoObject.Messenger
+  fullName: TcoCore.TcoObject.PlcTcoObject.Messenger
+  nameWithType: TcoObject.PlcTcoObject.Messenger
+- uid: TcoCore.TcoObject.PlcTcoObject.Messenger*
+  name: Messenger
+  href: api/TcoCore/TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Messenger_
+  commentId: Overload:TcoCore.TcoObject.PlcTcoObject.Messenger
+  isSpec: "True"
+  fullName: TcoCore.TcoObject.PlcTcoObject.Messenger
+  nameWithType: TcoObject.PlcTcoObject.Messenger
 - uid: TcoCore.TcoObject.Symbol
   name: Symbol
   href: api/TcoCore/TcoCore.TcoObject.html#TcoCore_TcoObject_Symbol
@@ -9781,6 +9825,427 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoSequencer.PlcTcoSequencer.PlcTcoSequencer
   nameWithType: TcoSequencer.PlcTcoSequencer.PlcTcoSequencer
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepIdFrom
+  name: _ChangeStepIdFrom
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__ChangeStepIdFrom
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepIdFrom
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepIdFrom
+  nameWithType: TcoSequencer.PlcTcoSequencer._ChangeStepIdFrom
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepIdTo
+  name: _ChangeStepIdTo
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__ChangeStepIdTo
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepIdTo
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepIdTo
+  nameWithType: TcoSequencer.PlcTcoSequencer._ChangeStepIdTo
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepOrderFrom
+  name: _ChangeStepOrderFrom
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__ChangeStepOrderFrom
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepOrderFrom
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepOrderFrom
+  nameWithType: TcoSequencer.PlcTcoSequencer._ChangeStepOrderFrom
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepOrderTo
+  name: _ChangeStepOrderTo
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__ChangeStepOrderTo
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepOrderTo
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._ChangeStepOrderTo
+  nameWithType: TcoSequencer.PlcTcoSequencer._ChangeStepOrderTo
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._checkStepIdRequestedInStepMode
+  name: _checkStepIdRequestedInStepMode
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__checkStepIdRequestedInStepMode
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._checkStepIdRequestedInStepMode
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._checkStepIdRequestedInStepMode
+  nameWithType: TcoSequencer.PlcTcoSequencer._checkStepIdRequestedInStepMode
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._currentStep
+  name: _currentStep
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__currentStep
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._currentStep
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._currentStep
+  nameWithType: TcoSequencer.PlcTcoSequencer._currentStep
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._cycleTimer
+  name: _cycleTimer
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__cycleTimer
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._cycleTimer
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._cycleTimer
+  nameWithType: TcoSequencer.PlcTcoSequencer._cycleTimer
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._IdOfThePreviouslyExecutedStep
+  name: _IdOfThePreviouslyExecutedStep
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__IdOfThePreviouslyExecutedStep
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._IdOfThePreviouslyExecutedStep
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._IdOfThePreviouslyExecutedStep
+  nameWithType: TcoSequencer.PlcTcoSequencer._IdOfThePreviouslyExecutedStep
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._isFirstStepEntry
+  name: _isFirstStepEntry
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__isFirstStepEntry
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._isFirstStepEntry
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._isFirstStepEntry
+  nameWithType: TcoSequencer.PlcTcoSequencer._isFirstStepEntry
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._LastCycleTime
+  name: _LastCycleTime
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__LastCycleTime
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._LastCycleTime
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._LastCycleTime
+  nameWithType: TcoSequencer.PlcTcoSequencer._LastCycleTime
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._numberOfStepsInSequence
+  name: _numberOfStepsInSequence
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__numberOfStepsInSequence
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._numberOfStepsInSequence
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._numberOfStepsInSequence
+  nameWithType: TcoSequencer.PlcTcoSequencer._numberOfStepsInSequence
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._pPreviusSteps
+  name: _pPreviusSteps
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__pPreviusSteps
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._pPreviusSteps
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._pPreviusSteps
+  nameWithType: TcoSequencer.PlcTcoSequencer._pPreviusSteps
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._previousNumberOfStepsInSequence
+  name: _previousNumberOfStepsInSequence
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__previousNumberOfStepsInSequence
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._previousNumberOfStepsInSequence
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._previousNumberOfStepsInSequence
+  nameWithType: TcoSequencer.PlcTcoSequencer._previousNumberOfStepsInSequence
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._requestedStepId
+  name: _requestedStepId
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__requestedStepId
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._requestedStepId
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._requestedStepId
+  nameWithType: TcoSequencer.PlcTcoSequencer._requestedStepId
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._requestStepActive
+  name: _requestStepActive
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__requestStepActive
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._requestStepActive
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._requestStepActive
+  nameWithType: TcoSequencer.PlcTcoSequencer._requestStepActive
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._requestStepCycle
+  name: _requestStepCycle
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__requestStepCycle
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._requestStepCycle
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._requestStepCycle
+  nameWithType: TcoSequencer.PlcTcoSequencer._requestStepCycle
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._SequenceElapsedTime
+  name: _SequenceElapsedTime
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__SequenceElapsedTime
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._SequenceElapsedTime
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._SequenceElapsedTime
+  nameWithType: TcoSequencer.PlcTcoSequencer._SequenceElapsedTime
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._sequencerErrorId
+  name: _sequencerErrorId
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__sequencerErrorId
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._sequencerErrorId
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._sequencerErrorId
+  nameWithType: TcoSequencer.PlcTcoSequencer._sequencerErrorId
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._sequencerHasError
+  name: _sequencerHasError
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__sequencerHasError
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._sequencerHasError
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._sequencerHasError
+  nameWithType: TcoSequencer.PlcTcoSequencer._sequencerHasError
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._stepCounter
+  name: _stepCounter
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__stepCounter
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._stepCounter
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._stepCounter
+  nameWithType: TcoSequencer.PlcTcoSequencer._stepCounter
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._StepElapsedTime
+  name: _StepElapsedTime
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__StepElapsedTime
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._StepElapsedTime
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._StepElapsedTime
+  nameWithType: TcoSequencer.PlcTcoSequencer._StepElapsedTime
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._StepIdChanged
+  name: _StepIdChanged
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__StepIdChanged
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._StepIdChanged
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._StepIdChanged
+  nameWithType: TcoSequencer.PlcTcoSequencer._StepIdChanged
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._stepIdUniquenessChecked
+  name: _stepIdUniquenessChecked
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__stepIdUniquenessChecked
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._stepIdUniquenessChecked
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._stepIdUniquenessChecked
+  nameWithType: TcoSequencer.PlcTcoSequencer._stepIdUniquenessChecked
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._stepModeControler
+  name: _stepModeControler
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__stepModeControler
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._stepModeControler
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._stepModeControler
+  nameWithType: TcoSequencer.PlcTcoSequencer._stepModeControler
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._StepOrderChanged
+  name: _StepOrderChanged
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__StepOrderChanged
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._StepOrderChanged
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._StepOrderChanged
+  nameWithType: TcoSequencer.PlcTcoSequencer._StepOrderChanged
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._StepTimer
+  name: _StepTimer
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__StepTimer
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._StepTimer
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._StepTimer
+  nameWithType: TcoSequencer.PlcTcoSequencer._StepTimer
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyEvaluatedStep
+  name: _theOrderOfTheCurrentlyEvaluatedStep
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__theOrderOfTheCurrentlyEvaluatedStep
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyEvaluatedStep
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyEvaluatedStep
+  nameWithType: TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyEvaluatedStep
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyExecutedStep
+  name: _theOrderOfTheCurrentlyExecutedStep
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__theOrderOfTheCurrentlyExecutedStep
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyExecutedStep
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyExecutedStep
+  nameWithType: TcoSequencer.PlcTcoSequencer._theOrderOfTheCurrentlyExecutedStep
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfThePreviouslyExecutedStep
+  name: _theOrderOfThePreviouslyExecutedStep
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer__theOrderOfThePreviouslyExecutedStep
+  commentId: F:TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfThePreviouslyExecutedStep
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer._theOrderOfThePreviouslyExecutedStep
+  nameWithType: TcoSequencer.PlcTcoSequencer._theOrderOfThePreviouslyExecutedStep
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.CheckStepId(System.Object,System.Object,System.Object)
+  name: CheckStepId(Object, Object, Object)
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_CheckStepId_System_Object_System_Object_System_Object_
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.CheckStepId(System.Object,System.Object,System.Object)
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.CheckStepId(System.Object, System.Object, System.Object)
+  nameWithType: TcoSequencer.PlcTcoSequencer.CheckStepId(Object, Object, Object)
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.CheckStepId*
+  name: CheckStepId
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_CheckStepId_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.CheckStepId
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.CheckStepId
+  nameWithType: TcoSequencer.PlcTcoSequencer.CheckStepId
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Close
+  name: Close()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Close
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.Close
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Close()
+  nameWithType: TcoSequencer.PlcTcoSequencer.Close()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Close*
+  name: Close
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Close_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Close
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Close
+  nameWithType: TcoSequencer.PlcTcoSequencer.Close
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.IsStepIdUnique(System.Object)
+  name: IsStepIdUnique(Object)
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_IsStepIdUnique_System_Object_
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.IsStepIdUnique(System.Object)
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.IsStepIdUnique(System.Object)
+  nameWithType: TcoSequencer.PlcTcoSequencer.IsStepIdUnique(Object)
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.IsStepIdUnique*
+  name: IsStepIdUnique
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_IsStepIdUnique_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.IsStepIdUnique
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.IsStepIdUnique
+  nameWithType: TcoSequencer.PlcTcoSequencer.IsStepIdUnique
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Main
+  name: Main()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Main
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.Main
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Main()
+  nameWithType: TcoSequencer.PlcTcoSequencer.Main()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Main*
+  name: Main
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Main_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Main
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Main
+  nameWithType: TcoSequencer.PlcTcoSequencer.Main
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Mode
+  name: Mode
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Mode
+  commentId: P:TcoCore.TcoSequencer.PlcTcoSequencer.Mode
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Mode
+  nameWithType: TcoSequencer.PlcTcoSequencer.Mode
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Mode*
+  name: Mode
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Mode_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Mode
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Mode
+  nameWithType: TcoSequencer.PlcTcoSequencer.Mode
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.OnlineChange
+  name: OnlineChange()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_OnlineChange
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.OnlineChange
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.OnlineChange()
+  nameWithType: TcoSequencer.PlcTcoSequencer.OnlineChange()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.OnlineChange*
+  name: OnlineChange
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_OnlineChange_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.OnlineChange
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.OnlineChange
+  nameWithType: TcoSequencer.PlcTcoSequencer.OnlineChange
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Open
+  name: Open()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Open
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.Open
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Open()
+  nameWithType: TcoSequencer.PlcTcoSequencer.Open()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Open*
+  name: Open
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Open_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Open
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Open
+  nameWithType: TcoSequencer.PlcTcoSequencer.Open
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.PostSequenceComplete
+  name: PostSequenceComplete()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_PostSequenceComplete
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.PostSequenceComplete
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.PostSequenceComplete()
+  nameWithType: TcoSequencer.PlcTcoSequencer.PostSequenceComplete()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.PostSequenceComplete*
+  name: PostSequenceComplete
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_PostSequenceComplete_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.PostSequenceComplete
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.PostSequenceComplete
+  nameWithType: TcoSequencer.PlcTcoSequencer.PostSequenceComplete
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.PostStepComplete
+  name: PostStepComplete()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_PostStepComplete
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.PostStepComplete
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.PostStepComplete()
+  nameWithType: TcoSequencer.PlcTcoSequencer.PostStepComplete()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.PostStepComplete*
+  name: PostStepComplete
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_PostStepComplete_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.PostStepComplete
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.PostStepComplete
+  nameWithType: TcoSequencer.PlcTcoSequencer.PostStepComplete
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.RequestStep(System.Object)
+  name: RequestStep(Object)
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_RequestStep_System_Object_
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.RequestStep(System.Object)
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.RequestStep(System.Object)
+  nameWithType: TcoSequencer.PlcTcoSequencer.RequestStep(Object)
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.RequestStep*
+  name: RequestStep
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_RequestStep_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.RequestStep
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.RequestStep
+  nameWithType: TcoSequencer.PlcTcoSequencer.RequestStep
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Reset
+  name: Reset()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Reset
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.Reset
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Reset()
+  nameWithType: TcoSequencer.PlcTcoSequencer.Reset()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Reset*
+  name: Reset
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Reset_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Reset
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Reset
+  nameWithType: TcoSequencer.PlcTcoSequencer.Reset
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Run
+  name: Run()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Run
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.Run
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Run()
+  nameWithType: TcoSequencer.PlcTcoSequencer.Run()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Run*
+  name: Run
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Run_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Run
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Run
+  nameWithType: TcoSequencer.PlcTcoSequencer.Run
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.SequenceComplete
+  name: SequenceComplete()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_SequenceComplete
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.SequenceComplete
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.SequenceComplete()
+  nameWithType: TcoSequencer.PlcTcoSequencer.SequenceComplete()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.SequenceComplete*
+  name: SequenceComplete
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_SequenceComplete_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.SequenceComplete
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.SequenceComplete
+  nameWithType: TcoSequencer.PlcTcoSequencer.SequenceComplete
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Step(System.Object,System.Object,System.Object)
+  name: Step(Object, Object, Object)
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Step_System_Object_System_Object_System_Object_
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.Step(System.Object,System.Object,System.Object)
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Step(System.Object, System.Object, System.Object)
+  nameWithType: TcoSequencer.PlcTcoSequencer.Step(Object, Object, Object)
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.Step*
+  name: Step
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_Step_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.Step
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.Step
+  nameWithType: TcoSequencer.PlcTcoSequencer.Step
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepBackward
+  name: StepBackward()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepBackward
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.StepBackward
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepBackward()
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepBackward()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepBackward*
+  name: StepBackward
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepBackward_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.StepBackward
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepBackward
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepBackward
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepChanged(System.Object)
+  name: StepChanged(Object)
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepChanged_System_Object_
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.StepChanged(System.Object)
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepChanged(System.Object)
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepChanged(Object)
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepChanged*
+  name: StepChanged
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepChanged_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.StepChanged
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepChanged
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepChanged
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepCompleteWhen(System.Object)
+  name: StepCompleteWhen(Object)
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepCompleteWhen_System_Object_
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.StepCompleteWhen(System.Object)
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepCompleteWhen(System.Object)
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepCompleteWhen(Object)
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepCompleteWhen*
+  name: StepCompleteWhen
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepCompleteWhen_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.StepCompleteWhen
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepCompleteWhen
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepCompleteWhen
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepForward
+  name: StepForward()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepForward
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.StepForward
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepForward()
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepForward()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepForward*
+  name: StepForward
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepForward_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.StepForward
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepForward
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepForward
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepIn
+  name: StepIn()
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepIn
+  commentId: M:TcoCore.TcoSequencer.PlcTcoSequencer.StepIn
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepIn()
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepIn()
+- uid: TcoCore.TcoSequencer.PlcTcoSequencer.StepIn*
+  name: StepIn
+  href: api/TcoCore/TcoCore.TcoSequencer.PlcTcoSequencer.html#TcoCore_TcoSequencer_PlcTcoSequencer_StepIn_
+  commentId: Overload:TcoCore.TcoSequencer.PlcTcoSequencer.StepIn
+  isSpec: "True"
+  fullName: TcoCore.TcoSequencer.PlcTcoSequencer.StepIn
+  nameWithType: TcoSequencer.PlcTcoSequencer.StepIn
 - uid: TcoCore.TcoSequencer.TcoCore#IShadowTcoSequencer#_currentStep
   name: IShadowTcoSequencer._currentStep
   href: api/TcoCore/TcoCore.TcoSequencer.html#TcoCore_TcoSequencer_TcoCore_IShadowTcoSequencer__currentStep
@@ -10010,63 +10475,6 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoState.TcoState
   nameWithType: TcoState.TcoState
-- uid: TcoCore.TcoState.__enableAutoRestore
-  name: __enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState___enableAutoRestore
-  commentId: F:TcoCore.TcoState.__enableAutoRestore
-  fullName: TcoCore.TcoState.__enableAutoRestore
-  nameWithType: TcoState.__enableAutoRestore
-- uid: TcoCore.TcoState.__messenger
-  name: __messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState___messenger
-  commentId: F:TcoCore.TcoState.__messenger
-  fullName: TcoCore.TcoState.__messenger
-  nameWithType: TcoState.__messenger
-- uid: TcoCore.TcoState.__State
-  name: __State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState___State
-  commentId: F:TcoCore.TcoState.__State
-  fullName: TcoCore.TcoState.__State
-  nameWithType: TcoState.__State
-- uid: TcoCore.TcoState._enableAutoRestore
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState__enableAutoRestore
-  commentId: P:TcoCore.TcoState._enableAutoRestore
-  fullName: TcoCore.TcoState._enableAutoRestore
-  nameWithType: TcoState._enableAutoRestore
-- uid: TcoCore.TcoState._enableAutoRestore*
-  name: _enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState__enableAutoRestore_
-  commentId: Overload:TcoCore.TcoState._enableAutoRestore
-  isSpec: "True"
-  fullName: TcoCore.TcoState._enableAutoRestore
-  nameWithType: TcoState._enableAutoRestore
-- uid: TcoCore.TcoState._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState__messenger
-  commentId: P:TcoCore.TcoState._messenger
-  fullName: TcoCore.TcoState._messenger
-  nameWithType: TcoState._messenger
-- uid: TcoCore.TcoState._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState__messenger_
-  commentId: Overload:TcoCore.TcoState._messenger
-  isSpec: "True"
-  fullName: TcoCore.TcoState._messenger
-  nameWithType: TcoState._messenger
-- uid: TcoCore.TcoState._State
-  name: _State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState__State
-  commentId: P:TcoCore.TcoState._State
-  fullName: TcoCore.TcoState._State
-  nameWithType: TcoState._State
-- uid: TcoCore.TcoState._State*
-  name: _State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState__State_
-  commentId: Overload:TcoCore.TcoState._State
-  isSpec: "True"
-  fullName: TcoCore.TcoState._State
-  nameWithType: TcoState._State
 - uid: TcoCore.TcoState.CopyPlainToShadow(TcoCore.PlainTcoState)
   name: CopyPlainToShadow(PlainTcoState)
   href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_CopyPlainToShadow_TcoCore_PlainTcoState_
@@ -10248,108 +10656,236 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoState.PlcTcoState.PlcTcoState
   nameWithType: TcoState.PlcTcoState.PlcTcoState
-- uid: TcoCore.TcoState.TcoCore#IShadowTcoState#_enableAutoRestore
-  name: IShadowTcoState._enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_IShadowTcoState__enableAutoRestore
-  commentId: P:TcoCore.TcoState.TcoCore#IShadowTcoState#_enableAutoRestore
-  name.vb: TcoCore.IShadowTcoState._enableAutoRestore
-  fullName: TcoCore.TcoState.TcoCore.IShadowTcoState._enableAutoRestore
-  nameWithType: TcoState.IShadowTcoState._enableAutoRestore
-  nameWithType.vb: TcoState.TcoCore.IShadowTcoState._enableAutoRestore
-- uid: TcoCore.TcoState.TcoCore#IShadowTcoState#_enableAutoRestore*
-  name: IShadowTcoState._enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_IShadowTcoState__enableAutoRestore_
-  commentId: Overload:TcoCore.TcoState.TcoCore#IShadowTcoState#_enableAutoRestore
+- uid: TcoCore.TcoState.PlcTcoState._AutoRestorable
+  name: _AutoRestorable
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__AutoRestorable
+  commentId: F:TcoCore.TcoState.PlcTcoState._AutoRestorable
+  fullName: TcoCore.TcoState.PlcTcoState._AutoRestorable
+  nameWithType: TcoState.PlcTcoState._AutoRestorable
+- uid: TcoCore.TcoState.PlcTcoState._ChangeStateCycle
+  name: _ChangeStateCycle
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__ChangeStateCycle
+  commentId: F:TcoCore.TcoState.PlcTcoState._ChangeStateCycle
+  fullName: TcoCore.TcoState.PlcTcoState._ChangeStateCycle
+  nameWithType: TcoState.PlcTcoState._ChangeStateCycle
+- uid: TcoCore.TcoState.PlcTcoState._enableAutoRestore
+  name: _enableAutoRestore
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__enableAutoRestore
+  commentId: F:TcoCore.TcoState.PlcTcoState._enableAutoRestore
+  fullName: TcoCore.TcoState.PlcTcoState._enableAutoRestore
+  nameWithType: TcoState.PlcTcoState._enableAutoRestore
+- uid: TcoCore.TcoState.PlcTcoState._LastChangedState
+  name: _LastChangedState
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__LastChangedState
+  commentId: F:TcoCore.TcoState.PlcTcoState._LastChangedState
+  fullName: TcoCore.TcoState.PlcTcoState._LastChangedState
+  nameWithType: TcoState.PlcTcoState._LastChangedState
+- uid: TcoCore.TcoState.PlcTcoState._MyParentsChangeStateCycle
+  name: _MyParentsChangeStateCycle
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__MyParentsChangeStateCycle
+  commentId: F:TcoCore.TcoState.PlcTcoState._MyParentsChangeStateCycle
+  fullName: TcoCore.TcoState.PlcTcoState._MyParentsChangeStateCycle
+  nameWithType: TcoState.PlcTcoState._MyParentsChangeStateCycle
+- uid: TcoCore.TcoState.PlcTcoState._MyParentsLastChangedState
+  name: _MyParentsLastChangedState
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__MyParentsLastChangedState
+  commentId: F:TcoCore.TcoState.PlcTcoState._MyParentsLastChangedState
+  fullName: TcoCore.TcoState.PlcTcoState._MyParentsLastChangedState
+  nameWithType: TcoState.PlcTcoState._MyParentsLastChangedState
+- uid: TcoCore.TcoState.PlcTcoState._StartCycleCount
+  name: _StartCycleCount
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__StartCycleCount
+  commentId: F:TcoCore.TcoState.PlcTcoState._StartCycleCount
+  fullName: TcoCore.TcoState.PlcTcoState._StartCycleCount
+  nameWithType: TcoState.PlcTcoState._StartCycleCount
+- uid: TcoCore.TcoState.PlcTcoState._State
+  name: _State
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__State
+  commentId: F:TcoCore.TcoState.PlcTcoState._State
+  fullName: TcoCore.TcoState.PlcTcoState._State
+  nameWithType: TcoState.PlcTcoState._State
+- uid: TcoCore.TcoState.PlcTcoState.AutoRestorable
+  name: AutoRestorable
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable
+  commentId: P:TcoCore.TcoState.PlcTcoState.AutoRestorable
+  fullName: TcoCore.TcoState.PlcTcoState.AutoRestorable
+  nameWithType: TcoState.PlcTcoState.AutoRestorable
+- uid: TcoCore.TcoState.PlcTcoState.AutoRestorable*
+  name: AutoRestorable
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.AutoRestorable
   isSpec: "True"
-  name.vb: TcoCore.IShadowTcoState._enableAutoRestore
-  fullName: TcoCore.TcoState.TcoCore.IShadowTcoState._enableAutoRestore
-  nameWithType: TcoState.IShadowTcoState._enableAutoRestore
-  nameWithType.vb: TcoState.TcoCore.IShadowTcoState._enableAutoRestore
-- uid: TcoCore.TcoState.TcoCore#IShadowTcoState#_messenger
-  name: IShadowTcoState._messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_IShadowTcoState__messenger
-  commentId: P:TcoCore.TcoState.TcoCore#IShadowTcoState#_messenger
-  name.vb: TcoCore.IShadowTcoState._messenger
-  fullName: TcoCore.TcoState.TcoCore.IShadowTcoState._messenger
-  nameWithType: TcoState.IShadowTcoState._messenger
-  nameWithType.vb: TcoState.TcoCore.IShadowTcoState._messenger
-- uid: TcoCore.TcoState.TcoCore#IShadowTcoState#_messenger*
-  name: IShadowTcoState._messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_IShadowTcoState__messenger_
-  commentId: Overload:TcoCore.TcoState.TcoCore#IShadowTcoState#_messenger
+  fullName: TcoCore.TcoState.PlcTcoState.AutoRestorable
+  nameWithType: TcoState.PlcTcoState.AutoRestorable
+- uid: TcoCore.TcoState.PlcTcoState.AutoRestore
+  name: AutoRestore()
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestore
+  commentId: M:TcoCore.TcoState.PlcTcoState.AutoRestore
+  fullName: TcoCore.TcoState.PlcTcoState.AutoRestore()
+  nameWithType: TcoState.PlcTcoState.AutoRestore()
+- uid: TcoCore.TcoState.PlcTcoState.AutoRestore*
+  name: AutoRestore
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestore_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.AutoRestore
   isSpec: "True"
-  name.vb: TcoCore.IShadowTcoState._messenger
-  fullName: TcoCore.TcoState.TcoCore.IShadowTcoState._messenger
-  nameWithType: TcoState.IShadowTcoState._messenger
-  nameWithType.vb: TcoState.TcoCore.IShadowTcoState._messenger
-- uid: TcoCore.TcoState.TcoCore#IShadowTcoState#_State
-  name: IShadowTcoState._State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_IShadowTcoState__State
-  commentId: P:TcoCore.TcoState.TcoCore#IShadowTcoState#_State
-  name.vb: TcoCore.IShadowTcoState._State
-  fullName: TcoCore.TcoState.TcoCore.IShadowTcoState._State
-  nameWithType: TcoState.IShadowTcoState._State
-  nameWithType.vb: TcoState.TcoCore.IShadowTcoState._State
-- uid: TcoCore.TcoState.TcoCore#IShadowTcoState#_State*
-  name: IShadowTcoState._State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_IShadowTcoState__State_
-  commentId: Overload:TcoCore.TcoState.TcoCore#IShadowTcoState#_State
+  fullName: TcoCore.TcoState.PlcTcoState.AutoRestore
+  nameWithType: TcoState.PlcTcoState.AutoRestore
+- uid: TcoCore.TcoState.PlcTcoState.ChangeState(System.Object)
+  name: ChangeState(Object)
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_
+  commentId: M:TcoCore.TcoState.PlcTcoState.ChangeState(System.Object)
+  fullName: TcoCore.TcoState.PlcTcoState.ChangeState(System.Object)
+  nameWithType: TcoState.PlcTcoState.ChangeState(Object)
+- uid: TcoCore.TcoState.PlcTcoState.ChangeState*
+  name: ChangeState
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeState_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.ChangeState
   isSpec: "True"
-  name.vb: TcoCore.IShadowTcoState._State
-  fullName: TcoCore.TcoState.TcoCore.IShadowTcoState._State
-  nameWithType: TcoState.IShadowTcoState._State
-  nameWithType.vb: TcoState.TcoCore.IShadowTcoState._State
-- uid: TcoCore.TcoState.TcoCore#ITcoState#_enableAutoRestore
-  name: ITcoState._enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_ITcoState__enableAutoRestore
-  commentId: P:TcoCore.TcoState.TcoCore#ITcoState#_enableAutoRestore
-  name.vb: TcoCore.ITcoState._enableAutoRestore
-  fullName: TcoCore.TcoState.TcoCore.ITcoState._enableAutoRestore
-  nameWithType: TcoState.ITcoState._enableAutoRestore
-  nameWithType.vb: TcoState.TcoCore.ITcoState._enableAutoRestore
-- uid: TcoCore.TcoState.TcoCore#ITcoState#_enableAutoRestore*
-  name: ITcoState._enableAutoRestore
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_ITcoState__enableAutoRestore_
-  commentId: Overload:TcoCore.TcoState.TcoCore#ITcoState#_enableAutoRestore
+  fullName: TcoCore.TcoState.PlcTcoState.ChangeState
+  nameWithType: TcoState.PlcTcoState.ChangeState
+- uid: TcoCore.TcoState.PlcTcoState.ChangeStateCycle
+  name: ChangeStateCycle
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeStateCycle
+  commentId: P:TcoCore.TcoState.PlcTcoState.ChangeStateCycle
+  fullName: TcoCore.TcoState.PlcTcoState.ChangeStateCycle
+  nameWithType: TcoState.PlcTcoState.ChangeStateCycle
+- uid: TcoCore.TcoState.PlcTcoState.ChangeStateCycle*
+  name: ChangeStateCycle
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeStateCycle_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.ChangeStateCycle
   isSpec: "True"
-  name.vb: TcoCore.ITcoState._enableAutoRestore
-  fullName: TcoCore.TcoState.TcoCore.ITcoState._enableAutoRestore
-  nameWithType: TcoState.ITcoState._enableAutoRestore
-  nameWithType.vb: TcoState.TcoCore.ITcoState._enableAutoRestore
-- uid: TcoCore.TcoState.TcoCore#ITcoState#_messenger
-  name: ITcoState._messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_ITcoState__messenger
-  commentId: P:TcoCore.TcoState.TcoCore#ITcoState#_messenger
-  name.vb: TcoCore.ITcoState._messenger
-  fullName: TcoCore.TcoState.TcoCore.ITcoState._messenger
-  nameWithType: TcoState.ITcoState._messenger
-  nameWithType.vb: TcoState.TcoCore.ITcoState._messenger
-- uid: TcoCore.TcoState.TcoCore#ITcoState#_messenger*
-  name: ITcoState._messenger
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_ITcoState__messenger_
-  commentId: Overload:TcoCore.TcoState.TcoCore#ITcoState#_messenger
+  fullName: TcoCore.TcoState.PlcTcoState.ChangeStateCycle
+  nameWithType: TcoState.PlcTcoState.ChangeStateCycle
+- uid: TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent
+  name: CheckIfAutoRestoreEnabledByParent()
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_CheckIfAutoRestoreEnabledByParent
+  commentId: M:TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent
+  fullName: TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent()
+  nameWithType: TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent()
+- uid: TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent*
+  name: CheckIfAutoRestoreEnabledByParent
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_CheckIfAutoRestoreEnabledByParent_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent
   isSpec: "True"
-  name.vb: TcoCore.ITcoState._messenger
-  fullName: TcoCore.TcoState.TcoCore.ITcoState._messenger
-  nameWithType: TcoState.ITcoState._messenger
-  nameWithType.vb: TcoState.TcoCore.ITcoState._messenger
-- uid: TcoCore.TcoState.TcoCore#ITcoState#_State
-  name: ITcoState._State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_ITcoState__State
-  commentId: P:TcoCore.TcoState.TcoCore#ITcoState#_State
-  name.vb: TcoCore.ITcoState._State
-  fullName: TcoCore.TcoState.TcoCore.ITcoState._State
-  nameWithType: TcoState.ITcoState._State
-  nameWithType.vb: TcoState.TcoCore.ITcoState._State
-- uid: TcoCore.TcoState.TcoCore#ITcoState#_State*
-  name: ITcoState._State
-  href: api/TcoCore/TcoCore.TcoState.html#TcoCore_TcoState_TcoCore_ITcoState__State_
-  commentId: Overload:TcoCore.TcoState.TcoCore#ITcoState#_State
+  fullName: TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent
+  nameWithType: TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent
+- uid: TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically
+  name: CheckIfCalledCyclically()
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_CheckIfCalledCyclically
+  commentId: M:TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically
+  fullName: TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically()
+  nameWithType: TcoState.PlcTcoState.CheckIfCalledCyclically()
+- uid: TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically*
+  name: CheckIfCalledCyclically
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_CheckIfCalledCyclically_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically
   isSpec: "True"
-  name.vb: TcoCore.ITcoState._State
-  fullName: TcoCore.TcoState.TcoCore.ITcoState._State
-  nameWithType: TcoState.ITcoState._State
-  nameWithType.vb: TcoState.TcoCore.ITcoState._State
+  fullName: TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically
+  nameWithType: TcoState.PlcTcoState.CheckIfCalledCyclically
+- uid: TcoCore.TcoState.PlcTcoState.Context
+  name: Context
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Context
+  commentId: P:TcoCore.TcoState.PlcTcoState.Context
+  fullName: TcoCore.TcoState.PlcTcoState.Context
+  nameWithType: TcoState.PlcTcoState.Context
+- uid: TcoCore.TcoState.PlcTcoState.Context*
+  name: Context
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Context_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.Context
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.Context
+  nameWithType: TcoState.PlcTcoState.Context
+- uid: TcoCore.TcoState.PlcTcoState.EnableAutoRestore
+  name: EnableAutoRestore
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_EnableAutoRestore
+  commentId: P:TcoCore.TcoState.PlcTcoState.EnableAutoRestore
+  fullName: TcoCore.TcoState.PlcTcoState.EnableAutoRestore
+  nameWithType: TcoState.PlcTcoState.EnableAutoRestore
+- uid: TcoCore.TcoState.PlcTcoState.EnableAutoRestore*
+  name: EnableAutoRestore
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_EnableAutoRestore_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.EnableAutoRestore
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.EnableAutoRestore
+  nameWithType: TcoState.PlcTcoState.EnableAutoRestore
+- uid: TcoCore.TcoState.PlcTcoState.Identity
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Identity
+  commentId: P:TcoCore.TcoState.PlcTcoState.Identity
+  fullName: TcoCore.TcoState.PlcTcoState.Identity
+  nameWithType: TcoState.PlcTcoState.Identity
+- uid: TcoCore.TcoState.PlcTcoState.Identity*
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Identity_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.Identity
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.Identity
+  nameWithType: TcoState.PlcTcoState.Identity
+- uid: TcoCore.TcoState.PlcTcoState.LastChangedState
+  name: LastChangedState
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_LastChangedState
+  commentId: P:TcoCore.TcoState.PlcTcoState.LastChangedState
+  fullName: TcoCore.TcoState.PlcTcoState.LastChangedState
+  nameWithType: TcoState.PlcTcoState.LastChangedState
+- uid: TcoCore.TcoState.PlcTcoState.LastChangedState*
+  name: LastChangedState
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_LastChangedState_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.LastChangedState
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.LastChangedState
+  nameWithType: TcoState.PlcTcoState.LastChangedState
+- uid: TcoCore.TcoState.PlcTcoState.OnStateChange(System.Object,System.Object)
+  name: OnStateChange(Object, Object)
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_
+  commentId: M:TcoCore.TcoState.PlcTcoState.OnStateChange(System.Object,System.Object)
+  fullName: TcoCore.TcoState.PlcTcoState.OnStateChange(System.Object, System.Object)
+  nameWithType: TcoState.PlcTcoState.OnStateChange(Object, Object)
+- uid: TcoCore.TcoState.PlcTcoState.OnStateChange*
+  name: OnStateChange
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.OnStateChange
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.OnStateChange
+  nameWithType: TcoState.PlcTcoState.OnStateChange
+- uid: TcoCore.TcoState.PlcTcoState.Restore
+  name: Restore()
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Restore
+  commentId: M:TcoCore.TcoState.PlcTcoState.Restore
+  fullName: TcoCore.TcoState.PlcTcoState.Restore()
+  nameWithType: TcoState.PlcTcoState.Restore()
+- uid: TcoCore.TcoState.PlcTcoState.Restore*
+  name: Restore
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Restore_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.Restore
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.Restore
+  nameWithType: TcoState.PlcTcoState.Restore
+- uid: TcoCore.TcoState.PlcTcoState.RestoreObject(System.Object)
+  name: RestoreObject(Object)
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_
+  commentId: M:TcoCore.TcoState.PlcTcoState.RestoreObject(System.Object)
+  fullName: TcoCore.TcoState.PlcTcoState.RestoreObject(System.Object)
+  nameWithType: TcoState.PlcTcoState.RestoreObject(Object)
+- uid: TcoCore.TcoState.PlcTcoState.RestoreObject*
+  name: RestoreObject
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_RestoreObject_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.RestoreObject
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.RestoreObject
+  nameWithType: TcoState.PlcTcoState.RestoreObject
+- uid: TcoCore.TcoState.PlcTcoState.State
+  name: State
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_State
+  commentId: P:TcoCore.TcoState.PlcTcoState.State
+  fullName: TcoCore.TcoState.PlcTcoState.State
+  nameWithType: TcoState.PlcTcoState.State
+- uid: TcoCore.TcoState.PlcTcoState.State*
+  name: State
+  href: api/TcoCore/TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_State_
+  commentId: Overload:TcoCore.TcoState.PlcTcoState.State
+  isSpec: "True"
+  fullName: TcoCore.TcoState.PlcTcoState.State
+  nameWithType: TcoState.PlcTcoState.State
 - uid: TcoCore.TcoStepModeControler
   name: TcoStepModeControler
   href: api/TcoCore/TcoCore.TcoStepModeControler.html
@@ -10575,6 +11111,43 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.PlcTcoStepModeControler
   nameWithType: TcoStepModeControler.PlcTcoStepModeControler.PlcTcoStepModeControler
+- uid: TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepBackward
+  name: _stepBackward
+  href: api/TcoCore/TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html#TcoCore_TcoStepModeControler_PlcTcoStepModeControler__stepBackward
+  commentId: F:TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepBackward
+  fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepBackward
+  nameWithType: TcoStepModeControler.PlcTcoStepModeControler._stepBackward
+- uid: TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepForward
+  name: _stepForward
+  href: api/TcoCore/TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html#TcoCore_TcoStepModeControler_PlcTcoStepModeControler__stepForward
+  commentId: F:TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepForward
+  fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepForward
+  nameWithType: TcoStepModeControler.PlcTcoStepModeControler._stepForward
+- uid: TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepIn
+  name: _stepIn
+  href: api/TcoCore/TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html#TcoCore_TcoStepModeControler_PlcTcoStepModeControler__stepIn
+  commentId: F:TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepIn
+  fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler._stepIn
+  nameWithType: TcoStepModeControler.PlcTcoStepModeControler._stepIn
+- uid: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.inCurrentStepRunning
+  name: inCurrentStepRunning
+  href: api/TcoCore/TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html#TcoCore_TcoStepModeControler_PlcTcoStepModeControler_inCurrentStepRunning
+  commentId: F:TcoCore.TcoStepModeControler.PlcTcoStepModeControler.inCurrentStepRunning
+  fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.inCurrentStepRunning
+  nameWithType: TcoStepModeControler.PlcTcoStepModeControler.inCurrentStepRunning
+- uid: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.Mode
+  name: Mode
+  href: api/TcoCore/TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html#TcoCore_TcoStepModeControler_PlcTcoStepModeControler_Mode
+  commentId: P:TcoCore.TcoStepModeControler.PlcTcoStepModeControler.Mode
+  fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.Mode
+  nameWithType: TcoStepModeControler.PlcTcoStepModeControler.Mode
+- uid: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.Mode*
+  name: Mode
+  href: api/TcoCore/TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html#TcoCore_TcoStepModeControler_PlcTcoStepModeControler_Mode_
+  commentId: Overload:TcoCore.TcoStepModeControler.PlcTcoStepModeControler.Mode
+  isSpec: "True"
+  fullName: TcoCore.TcoStepModeControler.PlcTcoStepModeControler.Mode
+  nameWithType: TcoStepModeControler.PlcTcoStepModeControler.Mode
 - uid: TcoCore.TcoStepModeControler.TcoCore#IShadowTcoStepModeControler#inCurrentStepRunning
   name: IShadowTcoStepModeControler.inCurrentStepRunning
   href: api/TcoCore/TcoCore.TcoStepModeControler.html#TcoCore_TcoStepModeControler_TcoCore_IShadowTcoStepModeControler_inCurrentStepRunning
@@ -10634,50 +11207,12 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoTask.TcoTask
   nameWithType: TcoTask.TcoTask
-- uid: TcoCore.TcoTask.__messenger
-  name: __messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask___messenger
-  commentId: F:TcoCore.TcoTask.__messenger
-  fullName: TcoCore.TcoTask.__messenger
-  nameWithType: TcoTask.__messenger
-- uid: TcoCore.TcoTask.__nextExpectedCycle
-  name: __nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask___nextExpectedCycle
-  commentId: F:TcoCore.TcoTask.__nextExpectedCycle
-  fullName: TcoCore.TcoTask.__nextExpectedCycle
-  nameWithType: TcoTask.__nextExpectedCycle
 - uid: TcoCore.TcoTask.__taskState
   name: __taskState
   href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask___taskState
   commentId: F:TcoCore.TcoTask.__taskState
   fullName: TcoCore.TcoTask.__taskState
   nameWithType: TcoTask.__taskState
-- uid: TcoCore.TcoTask._messenger
-  name: _messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask__messenger
-  commentId: P:TcoCore.TcoTask._messenger
-  fullName: TcoCore.TcoTask._messenger
-  nameWithType: TcoTask._messenger
-- uid: TcoCore.TcoTask._messenger*
-  name: _messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask__messenger_
-  commentId: Overload:TcoCore.TcoTask._messenger
-  isSpec: "True"
-  fullName: TcoCore.TcoTask._messenger
-  nameWithType: TcoTask._messenger
-- uid: TcoCore.TcoTask._nextExpectedCycle
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask__nextExpectedCycle
-  commentId: P:TcoCore.TcoTask._nextExpectedCycle
-  fullName: TcoCore.TcoTask._nextExpectedCycle
-  nameWithType: TcoTask._nextExpectedCycle
-- uid: TcoCore.TcoTask._nextExpectedCycle*
-  name: _nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask__nextExpectedCycle_
-  commentId: Overload:TcoCore.TcoTask._nextExpectedCycle
-  isSpec: "True"
-  fullName: TcoCore.TcoTask._nextExpectedCycle
-  nameWithType: TcoTask._nextExpectedCycle
 - uid: TcoCore.TcoTask._taskState
   name: _taskState
   href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask__taskState
@@ -10872,40 +11407,68 @@ references:
   isSpec: "True"
   fullName: TcoCore.TcoTask.PlcTcoTask.PlcTcoTask
   nameWithType: TcoTask.PlcTcoTask.PlcTcoTask
-- uid: TcoCore.TcoTask.TcoCore#IShadowTcoTask#_messenger
-  name: IShadowTcoTask._messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_IShadowTcoTask__messenger
-  commentId: P:TcoCore.TcoTask.TcoCore#IShadowTcoTask#_messenger
-  name.vb: TcoCore.IShadowTcoTask._messenger
-  fullName: TcoCore.TcoTask.TcoCore.IShadowTcoTask._messenger
-  nameWithType: TcoTask.IShadowTcoTask._messenger
-  nameWithType.vb: TcoTask.TcoCore.IShadowTcoTask._messenger
-- uid: TcoCore.TcoTask.TcoCore#IShadowTcoTask#_messenger*
-  name: IShadowTcoTask._messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_IShadowTcoTask__messenger_
-  commentId: Overload:TcoCore.TcoTask.TcoCore#IShadowTcoTask#_messenger
+- uid: TcoCore.TcoTask.PlcTcoTask._AutoRestorable
+  name: _AutoRestorable
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__AutoRestorable
+  commentId: F:TcoCore.TcoTask.PlcTcoTask._AutoRestorable
+  fullName: TcoCore.TcoTask.PlcTcoTask._AutoRestorable
+  nameWithType: TcoTask.PlcTcoTask._AutoRestorable
+- uid: TcoCore.TcoTask.PlcTcoTask._MyParentsChangeStateCycle
+  name: _MyParentsChangeStateCycle
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__MyParentsChangeStateCycle
+  commentId: F:TcoCore.TcoTask.PlcTcoTask._MyParentsChangeStateCycle
+  fullName: TcoCore.TcoTask.PlcTcoTask._MyParentsChangeStateCycle
+  nameWithType: TcoTask.PlcTcoTask._MyParentsChangeStateCycle
+- uid: TcoCore.TcoTask.PlcTcoTask._MyParentsLastChangeState
+  name: _MyParentsLastChangeState
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__MyParentsLastChangeState
+  commentId: F:TcoCore.TcoTask.PlcTcoTask._MyParentsLastChangeState
+  fullName: TcoCore.TcoTask.PlcTcoTask._MyParentsLastChangeState
+  nameWithType: TcoTask.PlcTcoTask._MyParentsLastChangeState
+- uid: TcoCore.TcoTask.PlcTcoTask._nextExpectedCycle
+  name: _nextExpectedCycle
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__nextExpectedCycle
+  commentId: F:TcoCore.TcoTask.PlcTcoTask._nextExpectedCycle
+  fullName: TcoCore.TcoTask.PlcTcoTask._nextExpectedCycle
+  nameWithType: TcoTask.PlcTcoTask._nextExpectedCycle
+- uid: TcoCore.TcoTask.PlcTcoTask._StartCycleCount
+  name: _StartCycleCount
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__StartCycleCount
+  commentId: F:TcoCore.TcoTask.PlcTcoTask._StartCycleCount
+  fullName: TcoCore.TcoTask.PlcTcoTask._StartCycleCount
+  nameWithType: TcoTask.PlcTcoTask._StartCycleCount
+- uid: TcoCore.TcoTask.PlcTcoTask._taskState
+  name: _taskState
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__taskState
+  commentId: F:TcoCore.TcoTask.PlcTcoTask._taskState
+  fullName: TcoCore.TcoTask.PlcTcoTask._taskState
+  nameWithType: TcoTask.PlcTcoTask._taskState
+- uid: TcoCore.TcoTask.PlcTcoTask.Context
+  name: Context
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask_Context
+  commentId: P:TcoCore.TcoTask.PlcTcoTask.Context
+  fullName: TcoCore.TcoTask.PlcTcoTask.Context
+  nameWithType: TcoTask.PlcTcoTask.Context
+- uid: TcoCore.TcoTask.PlcTcoTask.Context*
+  name: Context
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask_Context_
+  commentId: Overload:TcoCore.TcoTask.PlcTcoTask.Context
   isSpec: "True"
-  name.vb: TcoCore.IShadowTcoTask._messenger
-  fullName: TcoCore.TcoTask.TcoCore.IShadowTcoTask._messenger
-  nameWithType: TcoTask.IShadowTcoTask._messenger
-  nameWithType.vb: TcoTask.TcoCore.IShadowTcoTask._messenger
-- uid: TcoCore.TcoTask.TcoCore#IShadowTcoTask#_nextExpectedCycle
-  name: IShadowTcoTask._nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_IShadowTcoTask__nextExpectedCycle
-  commentId: P:TcoCore.TcoTask.TcoCore#IShadowTcoTask#_nextExpectedCycle
-  name.vb: TcoCore.IShadowTcoTask._nextExpectedCycle
-  fullName: TcoCore.TcoTask.TcoCore.IShadowTcoTask._nextExpectedCycle
-  nameWithType: TcoTask.IShadowTcoTask._nextExpectedCycle
-  nameWithType.vb: TcoTask.TcoCore.IShadowTcoTask._nextExpectedCycle
-- uid: TcoCore.TcoTask.TcoCore#IShadowTcoTask#_nextExpectedCycle*
-  name: IShadowTcoTask._nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_IShadowTcoTask__nextExpectedCycle_
-  commentId: Overload:TcoCore.TcoTask.TcoCore#IShadowTcoTask#_nextExpectedCycle
+  fullName: TcoCore.TcoTask.PlcTcoTask.Context
+  nameWithType: TcoTask.PlcTcoTask.Context
+- uid: TcoCore.TcoTask.PlcTcoTask.Identity
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask_Identity
+  commentId: P:TcoCore.TcoTask.PlcTcoTask.Identity
+  fullName: TcoCore.TcoTask.PlcTcoTask.Identity
+  nameWithType: TcoTask.PlcTcoTask.Identity
+- uid: TcoCore.TcoTask.PlcTcoTask.Identity*
+  name: Identity
+  href: api/TcoCore/TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask_Identity_
+  commentId: Overload:TcoCore.TcoTask.PlcTcoTask.Identity
   isSpec: "True"
-  name.vb: TcoCore.IShadowTcoTask._nextExpectedCycle
-  fullName: TcoCore.TcoTask.TcoCore.IShadowTcoTask._nextExpectedCycle
-  nameWithType: TcoTask.IShadowTcoTask._nextExpectedCycle
-  nameWithType.vb: TcoTask.TcoCore.IShadowTcoTask._nextExpectedCycle
+  fullName: TcoCore.TcoTask.PlcTcoTask.Identity
+  nameWithType: TcoTask.PlcTcoTask.Identity
 - uid: TcoCore.TcoTask.TcoCore#IShadowTcoTask#_taskState
   name: IShadowTcoTask._taskState
   href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_IShadowTcoTask__taskState
@@ -10923,40 +11486,6 @@ references:
   fullName: TcoCore.TcoTask.TcoCore.IShadowTcoTask._taskState
   nameWithType: TcoTask.IShadowTcoTask._taskState
   nameWithType.vb: TcoTask.TcoCore.IShadowTcoTask._taskState
-- uid: TcoCore.TcoTask.TcoCore#ITcoTask#_messenger
-  name: ITcoTask._messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_ITcoTask__messenger
-  commentId: P:TcoCore.TcoTask.TcoCore#ITcoTask#_messenger
-  name.vb: TcoCore.ITcoTask._messenger
-  fullName: TcoCore.TcoTask.TcoCore.ITcoTask._messenger
-  nameWithType: TcoTask.ITcoTask._messenger
-  nameWithType.vb: TcoTask.TcoCore.ITcoTask._messenger
-- uid: TcoCore.TcoTask.TcoCore#ITcoTask#_messenger*
-  name: ITcoTask._messenger
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_ITcoTask__messenger_
-  commentId: Overload:TcoCore.TcoTask.TcoCore#ITcoTask#_messenger
-  isSpec: "True"
-  name.vb: TcoCore.ITcoTask._messenger
-  fullName: TcoCore.TcoTask.TcoCore.ITcoTask._messenger
-  nameWithType: TcoTask.ITcoTask._messenger
-  nameWithType.vb: TcoTask.TcoCore.ITcoTask._messenger
-- uid: TcoCore.TcoTask.TcoCore#ITcoTask#_nextExpectedCycle
-  name: ITcoTask._nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_ITcoTask__nextExpectedCycle
-  commentId: P:TcoCore.TcoTask.TcoCore#ITcoTask#_nextExpectedCycle
-  name.vb: TcoCore.ITcoTask._nextExpectedCycle
-  fullName: TcoCore.TcoTask.TcoCore.ITcoTask._nextExpectedCycle
-  nameWithType: TcoTask.ITcoTask._nextExpectedCycle
-  nameWithType.vb: TcoTask.TcoCore.ITcoTask._nextExpectedCycle
-- uid: TcoCore.TcoTask.TcoCore#ITcoTask#_nextExpectedCycle*
-  name: ITcoTask._nextExpectedCycle
-  href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_ITcoTask__nextExpectedCycle_
-  commentId: Overload:TcoCore.TcoTask.TcoCore#ITcoTask#_nextExpectedCycle
-  isSpec: "True"
-  name.vb: TcoCore.ITcoTask._nextExpectedCycle
-  fullName: TcoCore.TcoTask.TcoCore.ITcoTask._nextExpectedCycle
-  nameWithType: TcoTask.ITcoTask._nextExpectedCycle
-  nameWithType.vb: TcoTask.TcoCore.ITcoTask._nextExpectedCycle
 - uid: TcoCore.TcoTask.TcoCore#ITcoTask#_taskState
   name: ITcoTask._taskState
   href: api/TcoCore/TcoCore.TcoTask.html#TcoCore_TcoTask_TcoCore_ITcoTask__taskState
@@ -11562,6 +12091,24 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.PlcAI_1_Module
   nameWithType: AI_1_Module.PlcAI_1_Module.PlcAI_1_Module
+- uid: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.iCHANNEL_1
+  name: iCHANNEL_1
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.html#TcoIoBeckhoff_AI_1_Module_PlcAI_1_Module_iCHANNEL_1
+  commentId: F:TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.iCHANNEL_1
+  fullName: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.iCHANNEL_1
+  nameWithType: AI_1_Module.PlcAI_1_Module.iCHANNEL_1
+- uid: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.InfoData
+  name: InfoData
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.html#TcoIoBeckhoff_AI_1_Module_PlcAI_1_Module_InfoData
+  commentId: F:TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.InfoData
+  fullName: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.InfoData
+  nameWithType: AI_1_Module.PlcAI_1_Module.InfoData
+- uid: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.WcState
+  name: WcState
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.html#TcoIoBeckhoff_AI_1_Module_PlcAI_1_Module_WcState
+  commentId: F:TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.WcState
+  fullName: TcoIoBeckhoff.AI_1_Module.PlcAI_1_Module.WcState
+  nameWithType: AI_1_Module.PlcAI_1_Module.WcState
 - uid: TcoIoBeckhoff.AI_1_Module.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_1_Module.html#TcoIoBeckhoff_AI_1_Module_Symbol
@@ -12148,6 +12695,18 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.AI_Channel.PlcAI_Channel.PlcAI_Channel
   nameWithType: AI_Channel.PlcAI_Channel.PlcAI_Channel
+- uid: TcoIoBeckhoff.AI_Channel.PlcAI_Channel.Status
+  name: Status
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_Channel.PlcAI_Channel.html#TcoIoBeckhoff_AI_Channel_PlcAI_Channel_Status
+  commentId: F:TcoIoBeckhoff.AI_Channel.PlcAI_Channel.Status
+  fullName: TcoIoBeckhoff.AI_Channel.PlcAI_Channel.Status
+  nameWithType: AI_Channel.PlcAI_Channel.Status
+- uid: TcoIoBeckhoff.AI_Channel.PlcAI_Channel.Value
+  name: Value
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_Channel.PlcAI_Channel.html#TcoIoBeckhoff_AI_Channel_PlcAI_Channel_Value
+  commentId: F:TcoIoBeckhoff.AI_Channel.PlcAI_Channel.Value
+  fullName: TcoIoBeckhoff.AI_Channel.PlcAI_Channel.Value
+  nameWithType: AI_Channel.PlcAI_Channel.Value
 - uid: TcoIoBeckhoff.AI_Channel.Status
   name: Status
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_Channel.html#TcoIoBeckhoff_AI_Channel_Status
@@ -12701,6 +13260,102 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.PlcAI_ChannelStatus
   nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.PlcAI_ChannelStatus
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Error
+  name: Error
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Error
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Error
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Error
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Error
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Greater
+  name: Limit_1_Greater
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Limit_1_Greater
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Greater
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Greater
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Greater
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Smaller
+  name: Limit_1_Smaller
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Limit_1_Smaller
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Smaller
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Smaller
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Limit_1_Smaller
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Greater
+  name: Limit_2_Greater
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Limit_2_Greater
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Greater
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Greater
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Greater
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Smaller
+  name: Limit_2_Smaller
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Limit_2_Smaller
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Smaller
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Smaller
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Limit_2_Smaller
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.OverRange
+  name: OverRange
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_OverRange
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.OverRange
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.OverRange
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.OverRange
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_1_7
+  name: Reserved_1_7
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_1_7
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_1_7
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_1_7
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_1_7
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_0
+  name: Reserved_2_0
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_2_0
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_0
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_0
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_0
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_1
+  name: Reserved_2_1
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_2_1
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_1
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_1
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_1
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_2
+  name: Reserved_2_2
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_2_2
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_2
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_2
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_2
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_3
+  name: Reserved_2_3
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_2_3
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_3
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_3
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_3
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_4
+  name: Reserved_2_4
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_2_4
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_4
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_4
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_4
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_5
+  name: Reserved_2_5
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_Reserved_2_5
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_5
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_5
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.Reserved_2_5
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoState
+  name: TxPdoState
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_TxPdoState
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoState
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoState
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoState
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoToggle
+  name: TxPdoToggle
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_TxPdoToggle
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoToggle
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoToggle
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.TxPdoToggle
+- uid: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.UnderRange
+  name: UnderRange
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_PlcAI_ChannelStatus_UnderRange
+  commentId: F:TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.UnderRange
+  fullName: TcoIoBeckhoff.AI_ChannelStatus.PlcAI_ChannelStatus.UnderRange
+  nameWithType: AI_ChannelStatus.PlcAI_ChannelStatus.UnderRange
 - uid: TcoIoBeckhoff.AI_ChannelStatus.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.AI_ChannelStatus.html#TcoIoBeckhoff_AI_ChannelStatus_Symbol
@@ -13185,6 +13840,18 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.PlcEL922x_ChannelBasic
   nameWithType: EL922x_ChannelBasic.PlcEL922x_ChannelBasic.PlcEL922x_ChannelBasic
+- uid: TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Control
+  name: Control
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.html#TcoIoBeckhoff_EL922x_ChannelBasic_PlcEL922x_ChannelBasic_Control
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Control
+  fullName: TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Control
+  nameWithType: EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Control
+- uid: TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Status
+  name: Status
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.html#TcoIoBeckhoff_EL922x_ChannelBasic_PlcEL922x_ChannelBasic_Status
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Status
+  fullName: TcoIoBeckhoff.EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Status
+  nameWithType: EL922x_ChannelBasic.PlcEL922x_ChannelBasic.Status
 - uid: TcoIoBeckhoff.EL922x_ChannelBasic.Status
   name: Status
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelBasic.html#TcoIoBeckhoff_EL922x_ChannelBasic_Status
@@ -13800,6 +14467,42 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.PlcEL922x_ChannelExtended
   nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.PlcEL922x_ChannelExtended
+- uid: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Control
+  name: Control
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_PlcEL922x_ChannelExtended_Control
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Control
+  fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Control
+  nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Control
+- uid: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Current
+  name: Current
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_PlcEL922x_ChannelExtended_Current
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Current
+  fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Current
+  nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Current
+- uid: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Load
+  name: Load
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_PlcEL922x_ChannelExtended_Load
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Load
+  fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Load
+  nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Load
+- uid: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Status
+  name: Status
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_PlcEL922x_ChannelExtended_Status
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Status
+  fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Status
+  nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.Status
+- uid: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageIn
+  name: VoltageIn
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_PlcEL922x_ChannelExtended_VoltageIn
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageIn
+  fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageIn
+  nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageIn
+- uid: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageOut
+  name: VoltageOut
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_PlcEL922x_ChannelExtended_VoltageOut
+  commentId: F:TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageOut
+  fullName: TcoIoBeckhoff.EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageOut
+  nameWithType: EL922x_ChannelExtended.PlcEL922x_ChannelExtended.VoltageOut
 - uid: TcoIoBeckhoff.EL922x_ChannelExtended.Status
   name: Status
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.EL922x_ChannelExtended.html#TcoIoBeckhoff_EL922x_ChannelExtended_Status
@@ -14540,6 +15243,12 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.FuseChannelBasic.PlcFuseChannelBasic.PlcFuseChannelBasic
   nameWithType: FuseChannelBasic.PlcFuseChannelBasic.PlcFuseChannelBasic
+- uid: TcoIoBeckhoff.FuseChannelBasic.PlcFuseChannelBasic._Chn
+  name: _Chn
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseChannelBasic.PlcFuseChannelBasic.html#TcoIoBeckhoff_FuseChannelBasic_PlcFuseChannelBasic__Chn
+  commentId: F:TcoIoBeckhoff.FuseChannelBasic.PlcFuseChannelBasic._Chn
+  fullName: TcoIoBeckhoff.FuseChannelBasic.PlcFuseChannelBasic._Chn
+  nameWithType: FuseChannelBasic.PlcFuseChannelBasic._Chn
 - uid: TcoIoBeckhoff.FuseChannelBasic.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseChannelBasic.html#TcoIoBeckhoff_FuseChannelBasic_Symbol
@@ -14838,6 +15547,12 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.FuseChannelExtended.PlcFuseChannelExtended.PlcFuseChannelExtended
   nameWithType: FuseChannelExtended.PlcFuseChannelExtended.PlcFuseChannelExtended
+- uid: TcoIoBeckhoff.FuseChannelExtended.PlcFuseChannelExtended._ChnEx
+  name: _ChnEx
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseChannelExtended.PlcFuseChannelExtended.html#TcoIoBeckhoff_FuseChannelExtended_PlcFuseChannelExtended__ChnEx
+  commentId: F:TcoIoBeckhoff.FuseChannelExtended.PlcFuseChannelExtended._ChnEx
+  fullName: TcoIoBeckhoff.FuseChannelExtended.PlcFuseChannelExtended._ChnEx
+  nameWithType: FuseChannelExtended.PlcFuseChannelExtended._ChnEx
 - uid: TcoIoBeckhoff.FuseChannelExtended.TcoIoBeckhoff#IFuseChannelExtended#_ChnEx
   name: IFuseChannelExtended._ChnEx
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseChannelExtended.html#TcoIoBeckhoff_FuseChannelExtended_TcoIoBeckhoff_IFuseChannelExtended__ChnEx
@@ -15292,6 +16007,30 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x.PlcFuseModuleEL922x
   nameWithType: FuseModuleEL922x.PlcFuseModuleEL922x.PlcFuseModuleEL922x
+- uid: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn1Basic
+  name: _chn1Basic
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x.html#TcoIoBeckhoff_FuseModuleEL922x_PlcFuseModuleEL922x__chn1Basic
+  commentId: F:TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn1Basic
+  fullName: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn1Basic
+  nameWithType: FuseModuleEL922x.PlcFuseModuleEL922x._chn1Basic
+- uid: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn1Extended
+  name: _chn1Extended
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x.html#TcoIoBeckhoff_FuseModuleEL922x_PlcFuseModuleEL922x__chn1Extended
+  commentId: F:TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn1Extended
+  fullName: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn1Extended
+  nameWithType: FuseModuleEL922x.PlcFuseModuleEL922x._chn1Extended
+- uid: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn2Basic
+  name: _chn2Basic
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x.html#TcoIoBeckhoff_FuseModuleEL922x_PlcFuseModuleEL922x__chn2Basic
+  commentId: F:TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn2Basic
+  fullName: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn2Basic
+  nameWithType: FuseModuleEL922x.PlcFuseModuleEL922x._chn2Basic
+- uid: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn2Extended
+  name: _chn2Extended
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x.html#TcoIoBeckhoff_FuseModuleEL922x_PlcFuseModuleEL922x__chn2Extended
+  commentId: F:TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn2Extended
+  fullName: TcoIoBeckhoff.FuseModuleEL922x.PlcFuseModuleEL922x._chn2Extended
+  nameWithType: FuseModuleEL922x.PlcFuseModuleEL922x._chn2Extended
 - uid: TcoIoBeckhoff.FuseModuleEL922x.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.FuseModuleEL922x.html#TcoIoBeckhoff_FuseModuleEL922x_Symbol
@@ -15751,6 +16490,12 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.Global_Version.PlcGlobal_Version.PlcGlobal_Version
   nameWithType: Global_Version.PlcGlobal_Version.PlcGlobal_Version
+- uid: TcoIoBeckhoff.Global_Version.PlcGlobal_Version.stLibVersion_TcoIoBeckhoff
+  name: stLibVersion_TcoIoBeckhoff
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.Global_Version.PlcGlobal_Version.html#TcoIoBeckhoff_Global_Version_PlcGlobal_Version_stLibVersion_TcoIoBeckhoff
+  commentId: F:TcoIoBeckhoff.Global_Version.PlcGlobal_Version.stLibVersion_TcoIoBeckhoff
+  fullName: TcoIoBeckhoff.Global_Version.PlcGlobal_Version.stLibVersion_TcoIoBeckhoff
+  nameWithType: Global_Version.PlcGlobal_Version.stLibVersion_TcoIoBeckhoff
 - uid: TcoIoBeckhoff.Global_Version.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.Global_Version.html#TcoIoBeckhoff_Global_Version_Symbol
@@ -17257,6 +18002,18 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.InfoData.PlcInfoData.PlcInfoData
   nameWithType: InfoData.PlcInfoData.PlcInfoData
+- uid: TcoIoBeckhoff.InfoData.PlcInfoData.EC_AmsAddr
+  name: EC_AmsAddr
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.InfoData.PlcInfoData.html#TcoIoBeckhoff_InfoData_PlcInfoData_EC_AmsAddr
+  commentId: F:TcoIoBeckhoff.InfoData.PlcInfoData.EC_AmsAddr
+  fullName: TcoIoBeckhoff.InfoData.PlcInfoData.EC_AmsAddr
+  nameWithType: InfoData.PlcInfoData.EC_AmsAddr
+- uid: TcoIoBeckhoff.InfoData.PlcInfoData.EC_State
+  name: EC_State
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.InfoData.PlcInfoData.html#TcoIoBeckhoff_InfoData_PlcInfoData_EC_State
+  commentId: F:TcoIoBeckhoff.InfoData.PlcInfoData.EC_State
+  fullName: TcoIoBeckhoff.InfoData.PlcInfoData.EC_State
+  nameWithType: InfoData.PlcInfoData.EC_State
 - uid: TcoIoBeckhoff.InfoData.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.InfoData.html#TcoIoBeckhoff_InfoData_Symbol
@@ -17826,6 +18583,30 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.IO.PlcIO.PlcIO
   nameWithType: IO.PlcIO.PlcIO
+- uid: TcoIoBeckhoff.IO.PlcIO._channel_1
+  name: _channel_1
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.IO.PlcIO.html#TcoIoBeckhoff_IO_PlcIO__channel_1
+  commentId: F:TcoIoBeckhoff.IO.PlcIO._channel_1
+  fullName: TcoIoBeckhoff.IO.PlcIO._channel_1
+  nameWithType: IO.PlcIO._channel_1
+- uid: TcoIoBeckhoff.IO.PlcIO._channel_2
+  name: _channel_2
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.IO.PlcIO.html#TcoIoBeckhoff_IO_PlcIO__channel_2
+  commentId: F:TcoIoBeckhoff.IO.PlcIO._channel_2
+  fullName: TcoIoBeckhoff.IO.PlcIO._channel_2
+  nameWithType: IO.PlcIO._channel_2
+- uid: TcoIoBeckhoff.IO.PlcIO._EL3001
+  name: _EL3001
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.IO.PlcIO.html#TcoIoBeckhoff_IO_PlcIO__EL3001
+  commentId: F:TcoIoBeckhoff.IO.PlcIO._EL3001
+  fullName: TcoIoBeckhoff.IO.PlcIO._EL3001
+  nameWithType: IO.PlcIO._EL3001
+- uid: TcoIoBeckhoff.IO.PlcIO._EL922x
+  name: _EL922x
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.IO.PlcIO.html#TcoIoBeckhoff_IO_PlcIO__EL922x
+  commentId: F:TcoIoBeckhoff.IO.PlcIO._EL922x
+  fullName: TcoIoBeckhoff.IO.PlcIO._EL922x
+  nameWithType: IO.PlcIO._EL922x
 - uid: TcoIoBeckhoff.IO.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.IO.html#TcoIoBeckhoff_IO_Symbol
@@ -19990,6 +20771,60 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct.PlcOutputStruct
   nameWithType: OutputStruct.PlcOutputStruct.PlcOutputStruct
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_0
+  name: _hidden_bit_0
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_bit_0
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_0
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_0
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_bit_0
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_1
+  name: _hidden_bit_1
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_bit_1
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_1
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_1
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_bit_1
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_2
+  name: _hidden_bit_2
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_bit_2
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_2
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_2
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_bit_2
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_3
+  name: _hidden_bit_3
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_bit_3
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_3
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_3
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_bit_3
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_4
+  name: _hidden_bit_4
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_bit_4
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_4
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_4
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_bit_4
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_5
+  name: _hidden_bit_5
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_bit_5
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_5
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_bit_5
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_bit_5
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_byte_0
+  name: _hidden_byte_0
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct__hidden_byte_0
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_byte_0
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct._hidden_byte_0
+  nameWithType: OutputStruct.PlcOutputStruct._hidden_byte_0
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct.Reset
+  name: Reset
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct_Reset
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct.Reset
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct.Reset
+  nameWithType: OutputStruct.PlcOutputStruct.Reset
+- uid: TcoIoBeckhoff.OutputStruct.PlcOutputStruct.Switch
+  name: Switch
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.PlcOutputStruct.html#TcoIoBeckhoff_OutputStruct_PlcOutputStruct_Switch
+  commentId: F:TcoIoBeckhoff.OutputStruct.PlcOutputStruct.Switch
+  fullName: TcoIoBeckhoff.OutputStruct.PlcOutputStruct.Switch
+  nameWithType: OutputStruct.PlcOutputStruct.Switch
 - uid: TcoIoBeckhoff.OutputStruct.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.OutputStruct.html#TcoIoBeckhoff_OutputStruct_Symbol
@@ -22521,6 +23356,156 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.PlcStatusStructBasic
   nameWithType: StatusStructBasic.PlcStatusStructBasic.PlcStatusStructBasic
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_0
+  name: _hidden_bit_0
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_0
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_0
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_0
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_0
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_1
+  name: _hidden_bit_1
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_1
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_1
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_1
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_1
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_10
+  name: _hidden_bit_10
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_10
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_10
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_10
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_10
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_11
+  name: _hidden_bit_11
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_11
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_11
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_11
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_11
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_12
+  name: _hidden_bit_12
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_12
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_12
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_12
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_12
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_13
+  name: _hidden_bit_13
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_13
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_13
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_13
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_13
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_2
+  name: _hidden_bit_2
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_2
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_2
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_2
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_2
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_3
+  name: _hidden_bit_3
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_3
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_3
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_3
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_3
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_4
+  name: _hidden_bit_4
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_4
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_4
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_4
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_4
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_5
+  name: _hidden_bit_5
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_5
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_5
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_5
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_5
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_6
+  name: _hidden_bit_6
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_6
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_6
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_6
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_6
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_7
+  name: _hidden_bit_7
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_7
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_7
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_7
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_7
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_8
+  name: _hidden_bit_8
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_8
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_8
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_8
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_8
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_9
+  name: _hidden_bit_9
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_bit_9
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_9
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_bit_9
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_bit_9
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_byte_14
+  name: _hidden_byte_14
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic__hidden_byte_14
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_byte_14
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic._hidden_byte_14
+  nameWithType: StatusStructBasic.PlcStatusStructBasic._hidden_byte_14
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.CoolDownLock
+  name: CoolDownLock
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_CoolDownLock
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.CoolDownLock
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.CoolDownLock
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.CoolDownLock
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.CurrentLevelWarning
+  name: CurrentLevelWarning
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_CurrentLevelWarning
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.CurrentLevelWarning
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.CurrentLevelWarning
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.CurrentLevelWarning
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Diag
+  name: Diag
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_Diag
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Diag
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Diag
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.Diag
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Enabled
+  name: Enabled
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_Enabled
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Enabled
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Enabled
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.Enabled
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Error
+  name: Error
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_Error
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Error
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Error
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.Error
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.HWProtection
+  name: HWProtection
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_HWProtection
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.HWProtection
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.HWProtection
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.HWProtection
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.StateReset
+  name: StateReset
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_StateReset
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.StateReset
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.StateReset
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.StateReset
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.StateSwitch
+  name: StateSwitch
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_StateSwitch
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.StateSwitch
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.StateSwitch
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.StateSwitch
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Tripped
+  name: Tripped
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_Tripped
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Tripped
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.Tripped
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.Tripped
+- uid: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.TxPDOState
+  name: TxPDOState
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_PlcStatusStructBasic_TxPDOState
+  commentId: F:TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.TxPDOState
+  fullName: TcoIoBeckhoff.StatusStructBasic.PlcStatusStructBasic.TxPDOState
+  nameWithType: StatusStructBasic.PlcStatusStructBasic.TxPDOState
 - uid: TcoIoBeckhoff.StatusStructBasic.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructBasic.html#TcoIoBeckhoff_StatusStructBasic_Symbol
@@ -22980,6 +23965,156 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.PlcStatusStructExtended
   nameWithType: StatusStructExtended.PlcStatusStructExtended.PlcStatusStructExtended
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_0
+  name: _hidden_bit_0
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended__hidden_bit_0
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_0
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_0
+  nameWithType: StatusStructExtended.PlcStatusStructExtended._hidden_bit_0
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_1
+  name: _hidden_bit_1
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended__hidden_bit_1
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_1
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_1
+  nameWithType: StatusStructExtended.PlcStatusStructExtended._hidden_bit_1
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_2
+  name: _hidden_bit_2
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended__hidden_bit_2
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_2
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_bit_2
+  nameWithType: StatusStructExtended.PlcStatusStructExtended._hidden_bit_2
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_byte_0
+  name: _hidden_byte_0
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended__hidden_byte_0
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_byte_0
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended._hidden_byte_0
+  nameWithType: StatusStructExtended.PlcStatusStructExtended._hidden_byte_0
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.CoolDownLock
+  name: CoolDownLock
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_CoolDownLock
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.CoolDownLock
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.CoolDownLock
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.CoolDownLock
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.CurrentLevelWarning
+  name: CurrentLevelWarning
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_CurrentLevelWarning
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.CurrentLevelWarning
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.CurrentLevelWarning
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.CurrentLevelWarning
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Diag
+  name: Diag
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Diag
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Diag
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Diag
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Diag
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledByDI
+  name: DisabledByDI
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_DisabledByDI
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledByDI
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledByDI
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.DisabledByDI
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledByOutput
+  name: DisabledByOutput
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_DisabledByOutput
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledByOutput
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledByOutput
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.DisabledByOutput
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledBySwitch
+  name: DisabledBySwitch
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_DisabledBySwitch
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledBySwitch
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.DisabledBySwitch
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.DisabledBySwitch
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Enabled
+  name: Enabled
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Enabled
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Enabled
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Enabled
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Enabled
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Error
+  name: Error
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Error
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Error
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Error
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Error
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.HWProtection
+  name: HWProtection
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_HWProtection
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.HWProtection
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.HWProtection
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.HWProtection
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.InputCycleCount
+  name: InputCycleCount
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_InputCycleCount
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.InputCycleCount
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.InputCycleCount
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.InputCycleCount
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.InputCycleCount2
+  name: InputCycleCount2
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_InputCycleCount2
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.InputCycleCount2
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.InputCycleCount2
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.InputCycleCount2
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Overload
+  name: Overload
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Overload
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Overload
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Overload
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Overload
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Overvoltage
+  name: Overvoltage
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Overvoltage
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Overvoltage
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Overvoltage
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Overvoltage
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.ShortCircuit
+  name: ShortCircuit
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_ShortCircuit
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.ShortCircuit
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.ShortCircuit
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.ShortCircuit
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateDeviceSwitch
+  name: StateDeviceSwitch
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_StateDeviceSwitch
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateDeviceSwitch
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateDeviceSwitch
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.StateDeviceSwitch
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateDigitalInput
+  name: StateDigitalInput
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_StateDigitalInput
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateDigitalInput
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateDigitalInput
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.StateDigitalInput
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateReset
+  name: StateReset
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_StateReset
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateReset
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateReset
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.StateReset
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateSwitch
+  name: StateSwitch
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_StateSwitch
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateSwitch
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.StateSwitch
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.StateSwitch
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Tripped
+  name: Tripped
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Tripped
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Tripped
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Tripped
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Tripped
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.TxPDOState
+  name: TxPDOState
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_TxPDOState
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.TxPDOState
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.TxPDOState
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.TxPDOState
+- uid: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Undervoltage
+  name: Undervoltage
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_PlcStatusStructExtended_Undervoltage
+  commentId: F:TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Undervoltage
+  fullName: TcoIoBeckhoff.StatusStructExtended.PlcStatusStructExtended.Undervoltage
+  nameWithType: StatusStructExtended.PlcStatusStructExtended.Undervoltage
 - uid: TcoIoBeckhoff.StatusStructExtended.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.StatusStructExtended.html#TcoIoBeckhoff_StatusStructExtended_Symbol
@@ -23798,6 +24933,18 @@ references:
   isSpec: "True"
   fullName: TcoIoBeckhoff.WcState.PlcWcState.PlcWcState
   nameWithType: WcState.PlcWcState.PlcWcState
+- uid: TcoIoBeckhoff.WcState.PlcWcState._InputToggle
+  name: _InputToggle
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.WcState.PlcWcState.html#TcoIoBeckhoff_WcState_PlcWcState__InputToggle
+  commentId: F:TcoIoBeckhoff.WcState.PlcWcState._InputToggle
+  fullName: TcoIoBeckhoff.WcState.PlcWcState._InputToggle
+  nameWithType: WcState.PlcWcState._InputToggle
+- uid: TcoIoBeckhoff.WcState.PlcWcState._WcState
+  name: _WcState
+  href: api/TcoIoBeckhoff/TcoIoBeckhoff.WcState.PlcWcState.html#TcoIoBeckhoff_WcState_PlcWcState__WcState
+  commentId: F:TcoIoBeckhoff.WcState.PlcWcState._WcState
+  fullName: TcoIoBeckhoff.WcState.PlcWcState._WcState
+  nameWithType: WcState.PlcWcState._WcState
 - uid: TcoIoBeckhoff.WcState.Symbol
   name: Symbol
   href: api/TcoIoBeckhoff/TcoIoBeckhoff.WcState.html#TcoIoBeckhoff_WcState_Symbol
@@ -24289,6 +25436,36 @@ references:
   isSpec: "True"
   fullName: TcoPneumatics.fbCylinder.PlcfbCylinder.PlcfbCylinder
   nameWithType: fbCylinder.PlcfbCylinder.PlcfbCylinder
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder._moveHomeTask
+  name: _moveHomeTask
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder__moveHomeTask
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder._moveHomeTask
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder._moveHomeTask
+  nameWithType: fbCylinder.PlcfbCylinder._moveHomeTask
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder._moveWorkTask
+  name: _moveWorkTask
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder__moveWorkTask
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder._moveWorkTask
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder._moveWorkTask
+  nameWithType: fbCylinder.PlcfbCylinder._moveWorkTask
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder._stopTask
+  name: _stopTask
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder__stopTask
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder._stopTask
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder._stopTask
+  nameWithType: fbCylinder.PlcfbCylinder._stopTask
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder.inAtHomePos
+  name: inAtHomePos
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder_inAtHomePos
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder.inAtHomePos
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder.inAtHomePos
+  nameWithType: fbCylinder.PlcfbCylinder.inAtHomePos
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder.inAtWorkPos
+  name: inAtWorkPos
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder_inAtWorkPos
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder.inAtWorkPos
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder.inAtWorkPos
+  nameWithType: fbCylinder.PlcfbCylinder.inAtWorkPos
 - uid: TcoPneumatics.fbCylinder.PlcfbCylinder.MoveToHome
   name: MoveToHome()
   href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder_MoveToHome
@@ -24315,6 +25492,18 @@ references:
   isSpec: "True"
   fullName: TcoPneumatics.fbCylinder.PlcfbCylinder.MoveToWork
   nameWithType: fbCylinder.PlcfbCylinder.MoveToWork
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder.outToHomePos
+  name: outToHomePos
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder_outToHomePos
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder.outToHomePos
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder.outToHomePos
+  nameWithType: fbCylinder.PlcfbCylinder.outToHomePos
+- uid: TcoPneumatics.fbCylinder.PlcfbCylinder.outToWorkPos
+  name: outToWorkPos
+  href: api/TcoPneumatics/TcoPneumatics.fbCylinder.PlcfbCylinder.html#TcoPneumatics_fbCylinder_PlcfbCylinder_outToWorkPos
+  commentId: F:TcoPneumatics.fbCylinder.PlcfbCylinder.outToWorkPos
+  fullName: TcoPneumatics.fbCylinder.PlcfbCylinder.outToWorkPos
+  nameWithType: fbCylinder.PlcfbCylinder.outToWorkPos
 - uid: TcoPneumatics.fbCylinder.TcoPneumatics#IfbCylinder#_moveHomeTask
   name: IfbCylinder._moveHomeTask
   href: api/TcoPneumatics/TcoPneumatics.fbCylinder.html#TcoPneumatics_fbCylinder_TcoPneumatics_IfbCylinder__moveHomeTask
@@ -24986,6 +26175,12 @@ references:
   isSpec: "True"
   fullName: TcoPneumatics.Global_Version.PlcGlobal_Version.PlcGlobal_Version
   nameWithType: Global_Version.PlcGlobal_Version.PlcGlobal_Version
+- uid: TcoPneumatics.Global_Version.PlcGlobal_Version.stLibVersion_TcoPneumatics
+  name: stLibVersion_TcoPneumatics
+  href: api/TcoPneumatics/TcoPneumatics.Global_Version.PlcGlobal_Version.html#TcoPneumatics_Global_Version_PlcGlobal_Version_stLibVersion_TcoPneumatics
+  commentId: F:TcoPneumatics.Global_Version.PlcGlobal_Version.stLibVersion_TcoPneumatics
+  fullName: TcoPneumatics.Global_Version.PlcGlobal_Version.stLibVersion_TcoPneumatics
+  nameWithType: Global_Version.PlcGlobal_Version.stLibVersion_TcoPneumatics
 - uid: TcoPneumatics.Global_Version.Symbol
   name: Symbol
   href: api/TcoPneumatics/TcoPneumatics.Global_Version.html#TcoPneumatics_Global_Version_Symbol

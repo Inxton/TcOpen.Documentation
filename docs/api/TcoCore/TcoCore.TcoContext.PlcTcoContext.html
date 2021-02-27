@@ -684,7 +684,22 @@
   
   <h1 id="TcoCore_TcoContext_PlcTcoContext" data-uid="TcoCore.TcoContext.PlcTcoContext" class="text-break">Class TcoContext.PlcTcoContext
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Basic construction container encapsulating TcoObjects, provides possibility to detect if its child member is called cyclically.
+This function block is abstract so it cannot be instantiated and must be extended. The <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run">Run()</a> of the extended instance must be
+called only once per plc cycle inside one TwinCAT PlcTask.
+Several TcoContext instances can be called inside sinle Twincat PlcTask, but only once per plc cycle. One instance must not be called inside several Twincat PlcTask.
+The TcoContext child members could ask theirs parent TcoContext for the values of the properties <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_StartCycleCount">StartCycleCount</a> and <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_EndCycleCount">EndCycleCount</a>.
+Comparing with theirs internal values they could determine if they were called in the previous plc cycle. Depending on their settings they could provide AutoRestorable mechanism on themselves or on theirs child members.</p>
+<div class="TIP"><h5>tip</h5><p>
+	For example, one TcoContext could contain all objects, components and PLC logic of one independent station of the machine, while the second TcoContext could contain all the objects of the second station of the same machine.
+	In this way, stations can be separated to prevent access from one station to another.
+</p></div>
+<remarks>			
+<div class="CAUTION"><h5>caution</h5><p>
+	Do not confuse Twincat PlcTask with <a class="xref" href="TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__ctor">PlcTcoTask()</a>.
+</p></div>
+</remarks>			
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -725,10 +740,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L247">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L435">View Source</a>
   </span>
   <a id="TcoCore_TcoContext_PlcTcoContext__ctor_" data-uid="TcoCore.TcoContext.PlcTcoContext.#ctor*"></a>
   <h4 id="TcoCore_TcoContext_PlcTcoContext__ctor" data-uid="TcoCore.TcoContext.PlcTcoContext.#ctor">PlcTcoContext()</h4>
@@ -739,6 +754,348 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected PlcTcoContext()</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext__endCycleCount.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext._endCycleCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L432">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext__endCycleCount" data-uid="TcoCore.TcoContext.PlcTcoContext._endCycleCount">_endCycleCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _endCycleCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext__Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext._Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L430">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext__Identity" data-uid="TcoCore.TcoContext.PlcTcoContext._Identity">_Identity</h4>
+  <div class="markdown level1 summary"><p>The own identity of the TcoContext.
+This variable is used in the higher level packages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _Identity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext__Messenger.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext._Messenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L433">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext__Messenger" data-uid="TcoCore.TcoContext.PlcTcoContext._Messenger">_Messenger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _Messenger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext__startCycleCount.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext._startCycleCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L431">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext__startCycleCount" data-uid="TcoCore.TcoContext.PlcTcoContext._startCycleCount">_startCycleCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _startCycleCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_Context.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.Context%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L364">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_Context_" data-uid="TcoCore.TcoContext.PlcTcoContext.Context*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_Context" data-uid="TcoCore.TcoContext.PlcTcoContext.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Returns the reference to this instance of the <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__ctor">PlcTcoContext()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoContext; Twin type: <a class="xref" href="TcoCore.ITcoContext.html">ITcoContext</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_EndCycleCount.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.EndCycleCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L380">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_EndCycleCount_" data-uid="TcoCore.TcoContext.PlcTcoContext.EndCycleCount*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_EndCycleCount" data-uid="TcoCore.TcoContext.PlcTcoContext.EndCycleCount">EndCycleCount</h4>
+  <div class="markdown level1 summary"><p>Value of this property is set at the end of the <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__ctor">PlcTcoContext()</a>, in the method <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Close">Close()</a> to the value of <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_StartCycleCount">StartCycleCount</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic EndCycleCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ULINT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerULInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L397">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_Identity_" data-uid="TcoCore.TcoContext.PlcTcoContext.Identity*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_Identity" data-uid="TcoCore.TcoContext.PlcTcoContext.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>Returns the own identity of the <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__ctor">PlcTcoContext()</a>. This value is assigned after download by calling the implicit method <code>FB_init()</code> and cannot be changed during runtime.
+This variable is used in the higher level packages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ULINT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerULInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_StartCycleCount.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.StartCycleCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L415">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_StartCycleCount_" data-uid="TcoCore.TcoContext.PlcTcoContext.StartCycleCount*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_StartCycleCount" data-uid="TcoCore.TcoContext.PlcTcoContext.StartCycleCount">StartCycleCount</h4>
+  <div class="markdown level1 summary"><p>Value of this property is incremented at the beginning of the <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext__ctor">PlcTcoContext()</a>, in the method <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Open">Open()</a>.
+By comparing this value with the internal values of the child members they are able to determine if they were called in the previous plc cycle.
+Depending on their settings they could provide AutoRestorable mechanism on themselves or on theirs child members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic StartCycleCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ULINT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerULInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_Close.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L302">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_Close_" data-uid="TcoCore.TcoContext.PlcTcoContext.Close*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_Close" data-uid="TcoCore.TcoContext.PlcTcoContext.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>This method is called at the end of the TcoContext. Implicit calling of this method is ensured by calling the method <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run">Run()</a>.
+<remarks><p>
+<div class="IMPORTANT"><h5>important</h5><p>
+	Do not call this method explicitly.
+</p></div>
+</remarks>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+protected void Close()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_Main.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.Main%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L317">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_Main_" data-uid="TcoCore.TcoContext.PlcTcoContext.Main*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_Main" data-uid="TcoCore.TcoContext.PlcTcoContext.Main">Main()</h4>
+  <div class="markdown level1 summary"><p>Main method of the TcoContext. Custom code needs to be placed here, calling of the methods <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Open">Open()</a> at the beggining
+and <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Close">Close()</a> at the end is ensured by calling the <code>InstanceName.Run()</code> method.
+This method is abstract, so each derived type has to implement its own implementation of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+protected void Main()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_Open.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.Open%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L335">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_Open_" data-uid="TcoCore.TcoContext.PlcTcoContext.Open*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_Open" data-uid="TcoCore.TcoContext.PlcTcoContext.Open">Open()</h4>
+  <div class="markdown level1 summary"><p>This method is called at the beginning of the TcoContext. Implicit calling of this method is ensured by calling the method <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run">Run()</a>.
+<remarks><p>
+<div class="IMPORTANT"><h5>important</h5><p>
+	Do not call this method explicitly.
+</p></div>
+</remarks>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+protected void Open()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext_Run.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext.Run%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L351">View Source</a>
+  </span>
+  <a id="TcoCore_TcoContext_PlcTcoContext_Run_" data-uid="TcoCore.TcoContext.PlcTcoContext.Run*"></a>
+  <h4 id="TcoCore_TcoContext_PlcTcoContext_Run" data-uid="TcoCore.TcoContext.PlcTcoContext.Run">Run()</h4>
+  <div class="markdown level1 summary"><p>
+	Ensures calling the <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Open">Open()</a>, <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Main">Main()</a> and <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Close">Close()</a> methods in the desired order.
+	This method is final, so it cannot be overloaded. The <code>InstanceName.Run()</code> needs to be called cyclically.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public void Run()</code></pre>
+  </div>
 </article>
           </div>
           
@@ -747,10 +1104,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoContext_PlcTcoContext.md&amp;value=---%0Auid%3A%20TcoCore.TcoContext.PlcTcoContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L243" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoContext.g.cs/#L287" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

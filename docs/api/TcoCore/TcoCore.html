@@ -734,23 +734,57 @@
       <section><p>This is POCO object for its respective onliner class. For documentation of this type see the onliner class.</p>
 </section>
       <h4><a class="xref" href="TcoCore.StepDetails.html">StepDetails</a></h4>
-      <section></section>
+      <section><p>Describes the status and internal variables of the step of the sequencer.</p>
+</section>
       <h4><a class="xref" href="TcoCore.StepDetails.PlcStepDetails.html">StepDetails.PlcStepDetails</a></h4>
-      <section></section>
+      <section><p>Describes the status and internal variables of the step of the sequencer.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoComponent.html">TcoComponent</a></h4>
       <section></section>
       <h4><a class="xref" href="TcoCore.TcoComponent.PlcTcoComponent.html">TcoComponent.PlcTcoComponent</a></h4>
       <section></section>
       <h4><a class="xref" href="TcoCore.TcoContext.html">TcoContext</a></h4>
-      <section></section>
+      <section><p>Basic construction container encapsulating TcoObjects, provides possibility to detect if its child member is called cyclically.
+This function block is abstract so it cannot be instantiated and must be extended. The <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run">Run()</a> of the extended instance must be
+called only once per plc cycle inside one TwinCAT PlcTask.
+Several TcoContext instances can be called inside sinle Twincat PlcTask, but only once per plc cycle. One instance must not be called inside several Twincat PlcTask.
+The TcoContext child members could ask theirs parent TcoContext for the values of the properties <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_StartCycleCount">StartCycleCount</a> and <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_EndCycleCount">EndCycleCount</a>.
+Comparing with theirs internal values they could determine if they were called in the previous plc cycle. Depending on their settings they could provide AutoRestorable mechanism on themselves or on theirs child members.</p>
+<div class="TIP"><h5>tip</h5><p>
+	For example, one TcoContext could contain all objects, components and PLC logic of one independent station of the machine, while the second TcoContext could contain all the objects of the second station of the same machine.
+	In this way, stations can be separated to prevent access from one station to another.
+</p></div>
+<remarks>			
+<div class="CAUTION"><h5>caution</h5><p>
+	Do not confuse Twincat PlcTask with <a class="xref" href="TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__ctor">PlcTcoTask()</a>.
+</p></div>
+</remarks>			
+</section>
       <h4><a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html">TcoContext.PlcTcoContext</a></h4>
-      <section></section>
+      <section><p>Basic construction container encapsulating TcoObjects, provides possibility to detect if its child member is called cyclically.
+This function block is abstract so it cannot be instantiated and must be extended. The <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_Run">Run()</a> of the extended instance must be
+called only once per plc cycle inside one TwinCAT PlcTask.
+Several TcoContext instances can be called inside sinle Twincat PlcTask, but only once per plc cycle. One instance must not be called inside several Twincat PlcTask.
+The TcoContext child members could ask theirs parent TcoContext for the values of the properties <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_StartCycleCount">StartCycleCount</a> and <a class="xref" href="TcoCore.TcoContext.PlcTcoContext.html#TcoCore_TcoContext_PlcTcoContext_EndCycleCount">EndCycleCount</a>.
+Comparing with theirs internal values they could determine if they were called in the previous plc cycle. Depending on their settings they could provide AutoRestorable mechanism on themselves or on theirs child members.</p>
+<div class="TIP"><h5>tip</h5><p>
+	For example, one TcoContext could contain all objects, components and PLC logic of one independent station of the machine, while the second TcoContext could contain all the objects of the second station of the same machine.
+	In this way, stations can be separated to prevent access from one station to another.
+</p></div>
+<remarks>			
+<div class="CAUTION"><h5>caution</h5><p>
+	Do not confuse Twincat PlcTask with <a class="xref" href="TcoCore.TcoTask.PlcTcoTask.html#TcoCore_TcoTask_PlcTcoTask__ctor">PlcTcoTask()</a>.
+</p></div>
+</remarks>			
+</section>
       <h4><a class="xref" href="TcoCore.TcoCoreTwinController.html">TcoCoreTwinController</a></h4>
       <section></section>
       <h4><a class="xref" href="TcoCore.TcoMessage.html">TcoMessage</a></h4>
-      <section></section>
+      <section><p>Complete message details including time stamp, message text, message category, identity of the message provider, PLC cycle in which the message was posted.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoMessage.PlcTcoMessage.html">TcoMessage.PlcTcoMessage</a></h4>
-      <section></section>
+      <section><p>Complete message details including time stamp, message text, message category, identity of the message provider, PLC cycle in which the message was posted.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoMessenger.html">TcoMessenger</a></h4>
       <section><p>Provides mechanism for delivering messages to the HMI.</p>
 </section>
@@ -758,26 +792,262 @@
       <section><p>Provides mechanism for delivering messages to the HMI.</p>
 </section>
       <h4><a class="xref" href="TcoCore.TcoObject.html">TcoObject</a></h4>
-      <section></section>
+      <section><p>Basic construction block from which all the others block of a TcOpen application must derive.
+This function block is abstract; it cannot be instantiated and must be extended.
+TcoObject must be assigned to some TcoContext at construction via <code>FB_init()</code>. TcoObject can have only one context.
+The TcoObject provides this context to all its members, so all objects in the TcoContext has the same context.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	All the variables _myContext, _ContextTcoObjectA, _ContextTcoObjectB, _ContextChildTcoObject should have all the same value.
+</p>
+<p>
+	All the variables _myIdentity, _TcoObjectAidentity, _TcoObjectBidentity, _ChildTcoObjectidentity should have uniques values.
+</p>
+<pre><code>//Declaration of the myTcoObject 
+FUNCTION_BLOCK myTcoObject EXTENDS TcoObject
+VAR
+_myChildTcoObject	:	myChildTcoObject(THIS^);
+END_VAR
+//Declaration of the myTcoContext 
+FUNCTION_BLOCK myTcoContext EXTENDS TcoContext
+VAR
+_myTcoObjectA		:	myTcoObject(THIS^);					
+_myTcoObjectB		:	myTcoObject(_myTcoObjectA.Context); 
+_myContext		:	ITcoContext;
+_ContextTcoObjectA	:	ITcoContext;
+_ContextTcoObjectB	:	ITcoContext;
+_ContextChildTcoObject	:	ITcoContext;
+_myIdentity		:	ULINT;
+_TcoObjectAidentity	: 	ULINT;
+_TcoObjectBidentity	: 	ULINT;
+_ChildTcoObjectidentity	: 	ULINT;							
+END_VAR
+//Plc code of the myTcoContext 
+_myContext		:= 		THIS^.Context;
+_ContextTcoObjectA	:=		_myTcoObjectA.Context;
+_ContextTcoObjectB	:=		_myTcoObjectB.Context;
+_ContextChildTcoObject	:=		_myTcoObjectB._myChildTcoObject.Context;
+_myIdentity		:=		THIS^.Identity;
+_TcoObjectAidentity	:=		_myTcoObjectA.Identity;
+_TcoObjectBidentity	:=		_myTcoObjectB.Identity;
+_ChildTcoObjectidentity	:=		_myTcoObjectB._myChildTcoObject.Identity;</code></pre>
+<div class="NOTE"><h5>Explanation</h5><p>
+<p>
+	The context of the myTcoContext instance is assigned to itself. As the _myTcoObjectA context is assigned to this instance of the myTcoContext, it is assigned to the same context,
+	and the value of the _ContextTcoObjectA will be the same as the value of the _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB instance is assigned to the _myTcoObjectA, that has already assigned context to this instance of the myTcoContext.
+	So the value of the _ContextTcoObjectB will be the same as the values of the _ContextTcoObjectA and _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB._myChildTcoObject instance is assigned to the _myTcoObjectB, that has already assigned context to _myTcoObjectA, 
+	that has already assigned its context to this instance of the myTcoContext.
+	So the value of the _ContextChildTcoObject wile be the same as the values _ContextTcoObjectB,_ContextTcoObjectA and _myContext.
+</p>
+<p>
+	As the Identities of all objects points to the themselves, all identities will have different values, as all objects are unique.
+</p>					
+</p></div>
+</p></div>
+</example>
+</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html">TcoObject.PlcTcoObject</a></h4>
-      <section></section>
+      <section><p>Basic construction block from which all the others block of a TcOpen application must derive.
+This function block is abstract; it cannot be instantiated and must be extended.
+TcoObject must be assigned to some TcoContext at construction via <code>FB_init()</code>. TcoObject can have only one context.
+The TcoObject provides this context to all its members, so all objects in the TcoContext has the same context.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	All the variables _myContext, _ContextTcoObjectA, _ContextTcoObjectB, _ContextChildTcoObject should have all the same value.
+</p>
+<p>
+	All the variables _myIdentity, _TcoObjectAidentity, _TcoObjectBidentity, _ChildTcoObjectidentity should have uniques values.
+</p>
+<pre><code>//Declaration of the myTcoObject 
+FUNCTION_BLOCK myTcoObject EXTENDS TcoObject
+VAR
+_myChildTcoObject	:	myChildTcoObject(THIS^);
+END_VAR
+//Declaration of the myTcoContext 
+FUNCTION_BLOCK myTcoContext EXTENDS TcoContext
+VAR
+_myTcoObjectA		:	myTcoObject(THIS^);					
+_myTcoObjectB		:	myTcoObject(_myTcoObjectA.Context); 
+_myContext		:	ITcoContext;
+_ContextTcoObjectA	:	ITcoContext;
+_ContextTcoObjectB	:	ITcoContext;
+_ContextChildTcoObject	:	ITcoContext;
+_myIdentity		:	ULINT;
+_TcoObjectAidentity	: 	ULINT;
+_TcoObjectBidentity	: 	ULINT;
+_ChildTcoObjectidentity	: 	ULINT;							
+END_VAR
+//Plc code of the myTcoContext 
+_myContext		:= 		THIS^.Context;
+_ContextTcoObjectA	:=		_myTcoObjectA.Context;
+_ContextTcoObjectB	:=		_myTcoObjectB.Context;
+_ContextChildTcoObject	:=		_myTcoObjectB._myChildTcoObject.Context;
+_myIdentity		:=		THIS^.Identity;
+_TcoObjectAidentity	:=		_myTcoObjectA.Identity;
+_TcoObjectBidentity	:=		_myTcoObjectB.Identity;
+_ChildTcoObjectidentity	:=		_myTcoObjectB._myChildTcoObject.Identity;</code></pre>
+<div class="NOTE"><h5>Explanation</h5><p>
+<p>
+	The context of the myTcoContext instance is assigned to itself. As the _myTcoObjectA context is assigned to this instance of the myTcoContext, it is assigned to the same context,
+	and the value of the _ContextTcoObjectA will be the same as the value of the _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB instance is assigned to the _myTcoObjectA, that has already assigned context to this instance of the myTcoContext.
+	So the value of the _ContextTcoObjectB will be the same as the values of the _ContextTcoObjectA and _myContext.
+</p>					
+<p>
+	The context of the _myTcoObjectB._myChildTcoObject instance is assigned to the _myTcoObjectB, that has already assigned context to _myTcoObjectA, 
+	that has already assigned its context to this instance of the myTcoContext.
+	So the value of the _ContextChildTcoObject wile be the same as the values _ContextTcoObjectB,_ContextTcoObjectA and _myContext.
+</p>
+<p>
+	As the Identities of all objects points to the themselves, all identities will have different values, as all objects are unique.
+</p>					
+</p></div>
+</p></div>
+</example>
+</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoObjectView.html">TcoObjectView</a></h4>
       <section><p>Interaction logic for TcoTask.xaml</p>
 </section>
       <h4><a class="xref" href="TcoCore.TcoObjectViewModel.html">TcoObjectViewModel</a></h4>
       <section></section>
       <h4><a class="xref" href="TcoCore.TcoSequencer.html">TcoSequencer</a></h4>
-      <section></section>
+      <section><p>Provides basic sequential control, including step mode, which allows to run the sequence step-by step, step forward and step backward.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoSequencer.PlcTcoSequencer.html">TcoSequencer.PlcTcoSequencer</a></h4>
-      <section></section>
+      <section><p>Provides basic sequential control, including step mode, which allows to run the sequence step-by step, step forward and step backward.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoState.html">TcoState</a></h4>
-      <section></section>
+      <section><p>Provides basic state controller. It can be implemented using <code>IF</code>, <code>IF</code> <code>ELSIF</code> or <code>CASE</code> statement. The transition to the different state needs to be perfromed by calling
+<a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_">ChangeState(Object)</a> method. This method ensures also calling the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_">OnStateChange(Object, Object)</a> every time that state is changed. The
+<code>OnStateChange()</code>can be overloaded by customized logic that needs to be executed uppon each change of the state. The TcoState could be used like this:</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example 1</h5><p>
+<p>
+<code>_myTask()</code> is not a member of this <code>TcoState()</code>, it is restored manually to be able to trigger it in the next state.
+</p>
+<pre><code>	IF State = 10 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF
+	IF State = 20 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF</code></pre>
+</p></div>
+</example>
+</p>		
+<p>
+<example>
+<div class="NOTE"><h5>Example 2</h5><p>
+<p>
+<code>_myTask()</code> is a member of this <code>TcoState()</code>, it is restored manually using the fluent syntax to be able to trigger it in the next state.
+</p>
+<pre><code>	CASE State OF
+		10:	
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF
+		20:
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF	
+	END_CASE</code></pre>
+</p></div>
+</example>
+<p>
+	See <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_">RestoreObject(Object)</a> for more details.
+</p>
+</p>			
+</section>
       <h4><a class="xref" href="TcoCore.TcoState.PlcTcoState.html">TcoState.PlcTcoState</a></h4>
-      <section></section>
+      <section><p>Provides basic state controller. It can be implemented using <code>IF</code>, <code>IF</code> <code>ELSIF</code> or <code>CASE</code> statement. The transition to the different state needs to be perfromed by calling
+<a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_">ChangeState(Object)</a> method. This method ensures also calling the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_">OnStateChange(Object, Object)</a> every time that state is changed. The
+<code>OnStateChange()</code>can be overloaded by customized logic that needs to be executed uppon each change of the state. The TcoState could be used like this:</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example 1</h5><p>
+<p>
+<code>_myTask()</code> is not a member of this <code>TcoState()</code>, it is restored manually to be able to trigger it in the next state.
+</p>
+<pre><code>	IF State = 10 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF
+	IF State = 20 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF</code></pre>
+</p></div>
+</example>
+</p>		
+<p>
+<example>
+<div class="NOTE"><h5>Example 2</h5><p>
+<p>
+<code>_myTask()</code> is a member of this <code>TcoState()</code>, it is restored manually using the fluent syntax to be able to trigger it in the next state.
+</p>
+<pre><code>	CASE State OF
+		10:	
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF
+		20:
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF	
+	END_CASE</code></pre>
+</p></div>
+</example>
+<p>
+	See <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_">RestoreObject(Object)</a> for more details.
+</p>
+</p>			
+</section>
       <h4><a class="xref" href="TcoCore.TcoStepModeControler.html">TcoStepModeControler</a></h4>
-      <section></section>
+      <section><p>Provides switching between sequencer modes so as handling stepping tasks in th step mode.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoStepModeControler.PlcTcoStepModeControler.html">TcoStepModeControler.PlcTcoStepModeControler</a></h4>
-      <section></section>
+      <section><p>Provides switching between sequencer modes so as handling stepping tasks in th step mode.</p>
+</section>
       <h4><a class="xref" href="TcoCore.TcoTask.html">TcoTask</a></h4>
       <section></section>
       <h4><a class="xref" href="TcoCore.TcoTask.PlcTcoTask.html">TcoTask.PlcTcoTask</a></h4>
@@ -865,13 +1135,17 @@
       <section><p>Enumerator of message categories.</p>
 </section>
       <h4><a class="xref" href="TcoCore.eSequencerError.html">eSequencerError</a></h4>
-      <section></section>
+      <section><p>Describes cause of the sequencer error.</p>
+</section>
       <h4><a class="xref" href="TcoCore.eSequencerMode.html">eSequencerMode</a></h4>
-      <section></section>
+      <section><p>Modes of the sequencer.</p>
+</section>
       <h4><a class="xref" href="TcoCore.eStepStatus.html">eStepStatus</a></h4>
-      <section></section>
+      <section><p>Describes the step status inside the sequencer.</p>
+</section>
       <h4><a class="xref" href="TcoCore.eTaskState.html">eTaskState</a></h4>
-      <section></section>
+      <section><p>Describes the state of the respective task.</p>
+</section>
 </article>
           </div>
           

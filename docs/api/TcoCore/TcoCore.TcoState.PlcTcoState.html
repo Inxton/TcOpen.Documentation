@@ -684,7 +684,61 @@
   
   <h1 id="TcoCore_TcoState_PlcTcoState" data-uid="TcoCore.TcoState.PlcTcoState" class="text-break">Class TcoState.PlcTcoState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides basic state controller. It can be implemented using <code>IF</code>, <code>IF</code> <code>ELSIF</code> or <code>CASE</code> statement. The transition to the different state needs to be perfromed by calling
+<a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_">ChangeState(Object)</a> method. This method ensures also calling the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_">OnStateChange(Object, Object)</a> every time that state is changed. The
+<code>OnStateChange()</code>can be overloaded by customized logic that needs to be executed uppon each change of the state. The TcoState could be used like this:</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example 1</h5><p>
+<p>
+<code>_myTask()</code> is not a member of this <code>TcoState()</code>, it is restored manually to be able to trigger it in the next state.
+</p>
+<pre><code>	IF State = 10 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF
+	IF State = 20 THEN
+		Main._myTask.Invoke();
+		Main._myTask.Execute();
+		IF Main._myTask.Done THEN
+			ChangeState(State + 10);
+			Main._myTask.Restore();
+		END_IF
+	END_IF</code></pre>
+</p></div>
+</example>
+</p>		
+<p>
+<example>
+<div class="NOTE"><h5>Example 2</h5><p>
+<p>
+<code>_myTask()</code> is a member of this <code>TcoState()</code>, it is restored manually using the fluent syntax to be able to trigger it in the next state.
+</p>
+<pre><code>	CASE State OF
+		10:	
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF
+		20:
+		_myTask.Invoke();
+		_myTask.Execute();
+		IF _myTask.Done THEN
+			ChangeState(State + 10).RestoreObject(_myTask);
+		END_IF	
+	END_CASE</code></pre>
+</p></div>
+</example>
+<p>
+	See <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_">RestoreObject(Object)</a> for more details.
+</p>
+</p>			
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -696,6 +750,18 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject_Messenger">TcoObject.PlcTcoObject.Messenger</a>
+    </div>
+    <div>
+      <a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__Identity">TcoObject.PlcTcoObject._Identity</a>
+    </div>
+    <div>
+      <a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__Parent">TcoObject.PlcTcoObject._Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="TcoCore.TcoObject.PlcTcoObject.html#TcoCore_TcoObject_PlcTcoObject__messenger">TcoObject.PlcTcoObject._messenger</a>
+    </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
@@ -728,10 +794,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__ctor.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L186">View Source</a>
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L540">View Source</a>
   </span>
   <a id="TcoCore_TcoState_PlcTcoState__ctor_" data-uid="TcoCore.TcoState.PlcTcoState.#ctor*"></a>
   <h4 id="TcoCore_TcoState_PlcTcoState__ctor" data-uid="TcoCore.TcoState.PlcTcoState.#ctor">PlcTcoState()</h4>
@@ -742,6 +808,794 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected PlcTcoState()</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__AutoRestorable.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._AutoRestorable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L533">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__AutoRestorable" data-uid="TcoCore.TcoState.PlcTcoState._AutoRestorable">_AutoRestorable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _AutoRestorable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__ChangeStateCycle.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._ChangeStateCycle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L536">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__ChangeStateCycle" data-uid="TcoCore.TcoState.PlcTcoState._ChangeStateCycle">_ChangeStateCycle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _ChangeStateCycle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__enableAutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._enableAutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L532">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__enableAutoRestore" data-uid="TcoCore.TcoState.PlcTcoState._enableAutoRestore">_enableAutoRestore</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _enableAutoRestore</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__LastChangedState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._LastChangedState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L537">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__LastChangedState" data-uid="TcoCore.TcoState.PlcTcoState._LastChangedState">_LastChangedState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _LastChangedState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__MyParentsChangeStateCycle.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._MyParentsChangeStateCycle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L535">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__MyParentsChangeStateCycle" data-uid="TcoCore.TcoState.PlcTcoState._MyParentsChangeStateCycle">_MyParentsChangeStateCycle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _MyParentsChangeStateCycle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__MyParentsLastChangedState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._MyParentsLastChangedState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L538">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__MyParentsLastChangedState" data-uid="TcoCore.TcoState.PlcTcoState._MyParentsLastChangedState">_MyParentsLastChangedState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _MyParentsLastChangedState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__StartCycleCount.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._StartCycleCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L534">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__StartCycleCount" data-uid="TcoCore.TcoState.PlcTcoState._StartCycleCount">_StartCycleCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _StartCycleCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState__State.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState._State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L531">View Source</a>
+  </span>
+  <h4 id="TcoCore_TcoState_PlcTcoState__State" data-uid="TcoCore.TcoState.PlcTcoState._State">_State</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object _State</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_AutoRestorable.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.AutoRestorable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L408">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_AutoRestorable_" data-uid="TcoCore.TcoState.PlcTcoState.AutoRestorable*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_AutoRestorable" data-uid="TcoCore.TcoState.PlcTcoState.AutoRestorable">AutoRestorable</h4>
+  <div class="markdown level1 summary"><p>Returns if this instance is auto restorable. This is 'dependency property'. Value of this property is given by the parent of this object.
+This value is assigned after download by calling the implicit method <code>FB_init()</code> of the parent object and cannot be changed during runtime.
+The <code>AutoRestorable</code> property of this objects is retrieved from the <code>EnableAutoRestore</code> property of the parent object.
+This is done by calling the <code>CheckIfAutoRestoreEnabledByParent()</code> method inside the implicit method <code>FB_init()</code> after download.
+If this instance is the auto restorable it will call the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Restore">Restore()</a> method if:</p>
+<p>
+1.) This instance has not been called for one or more cycles and starts to be called again. (By calling the instance means asking for its property <code>State</code>).
+</p>
+<p>
+2.)	Parent object of this instance changes its state.
+</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_EnableAutoRestore">EnableAutoRestore</a>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic AutoRestorable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type BOOL; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerBool</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_ChangeStateCycle.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.ChangeStateCycle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L425">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_ChangeStateCycle_" data-uid="TcoCore.TcoState.PlcTcoState.ChangeStateCycle*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_ChangeStateCycle" data-uid="TcoCore.TcoState.PlcTcoState.ChangeStateCycle">ChangeStateCycle</h4>
+  <div class="markdown level1 summary"><p>Returns number of the Plc cycle during which this instance changes its <code>State</code> last time.
+The child objects ask for this value to ensure auto restore mechanism working.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic ChangeStateCycle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ULINT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerULInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_Context.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.Context%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L442">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_Context_" data-uid="TcoCore.TcoState.PlcTcoState.Context*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_Context" data-uid="TcoCore.TcoState.PlcTcoState.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Returns the context of the parent object, that this object is assigned to.
+This context is given by declaration, its value is assigned after download by calling the implicit method <code>FB_init()</code> and cannot be changed during runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoContext; Twin type: <a class="xref" href="TcoCore.ITcoContext.html">ITcoContext</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_EnableAutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.EnableAutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L469">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_EnableAutoRestore_" data-uid="TcoCore.TcoState.PlcTcoState.EnableAutoRestore*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_EnableAutoRestore" data-uid="TcoCore.TcoState.PlcTcoState.EnableAutoRestore">EnableAutoRestore</h4>
+  <div class="markdown level1 summary"><p>Returns if the auto restore mechanism is enabled for this instance. This property does not affect this instance, but it affects all members of this instance.
+If the auto restore is enabled, the child member call its <code>Restore()</code> method if:</p>
+<p>
+1.) Its instance has not been called for one or more cycles.
+</p>
+<p>
+2.)	Its parent object (THIS^ instance) has changed its state.
+</p>
+This value is assigned after download by calling the implicit method <code>FB_init()</code> and cannot be changed during runtime.
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable">AutoRestorable</a>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic EnableAutoRestore { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type BOOL; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerBool</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_Identity.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.Identity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L486">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_Identity_" data-uid="TcoCore.TcoState.PlcTcoState.Identity*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_Identity" data-uid="TcoCore.TcoState.PlcTcoState.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>Returns the own identity of the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState__ctor">PlcTcoState()</a>. This value is assigned after download by calling the implicit method <code>FB_init()</code> and cannot be changed during runtime.
+This variable is used in the higher level packages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ULINT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerULInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_LastChangedState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.LastChangedState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L503">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_LastChangedState_" data-uid="TcoCore.TcoState.PlcTcoState.LastChangedState*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_LastChangedState" data-uid="TcoCore.TcoState.PlcTcoState.LastChangedState">LastChangedState</h4>
+  <div class="markdown level1 summary"><p>Returns last <code>State</code> into which this instance has been changed lasttime.
+The child objects ask for this value to ensure auto restore mechanism working.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic LastChangedState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type INT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_State.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L522">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_State_" data-uid="TcoCore.TcoState.PlcTcoState.State*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_State" data-uid="TcoCore.TcoState.PlcTcoState.State">State</h4>
+  <div class="markdown level1 summary"><p>Return actual state of this instance. Needs to be asked for cyclically in case of this instance is auto restorable.</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable">AutoRestorable</a>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type INT; Twin type: <span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_AutoRestore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.AutoRestore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L235">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_AutoRestore_" data-uid="TcoCore.TcoState.PlcTcoState.AutoRestore*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_AutoRestore" data-uid="TcoCore.TcoState.PlcTcoState.AutoRestore">AutoRestore()</h4>
+  <div class="markdown level1 summary"><p>Private method called each time that State property is asked for. If this instance is auto restorable, this method ensures calling the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Restore">Restore()</a> method if:</p>
+<p>
+	1.)	Parent object of this instance changes its state in this Plc cycle.
+</p>
+<p>
+	2.)	Parent object of this instance changes its state no mather when and this instance has not yet process this change.
+</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable">AutoRestorable</a>
+</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_EnableAutoRestore">EnableAutoRestore</a>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+void AutoRestore()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.ChangeState(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L264">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_ChangeState_" data-uid="TcoCore.TcoState.PlcTcoState.ChangeState*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_ChangeState_System_Object_" data-uid="TcoCore.TcoState.PlcTcoState.ChangeState(System.Object)">ChangeState(Object)</h4>
+  <div class="markdown level1 summary"><p>Use to change the State property of this instance to the new value. This method is final, so it cannot be overloaded. However there is a <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_">OnStateChange(Object, Object)</a>
+method that is called on each change of the <code>State</code> and could be overloaded.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	Possibility to use the fluent syntax.
+</p>
+<pre><code>ChangeState(newState).RestoreObject(myChildObject);</code></pre>
+</p></div>
+</example>
+</p>		
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic ChangeState(dynamic NewState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">NewState</span></td>
+        <td><p>Plc type : INT [VAR_INPUT]; Twin type : <span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></p>
+<p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoState; Twin type: <a class="xref" href="TcoCore.ITcoState.html">ITcoState</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_CheckIfAutoRestoreEnabledByParent.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L278">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_CheckIfAutoRestoreEnabledByParent_" data-uid="TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_CheckIfAutoRestoreEnabledByParent" data-uid="TcoCore.TcoState.PlcTcoState.CheckIfAutoRestoreEnabledByParent">CheckIfAutoRestoreEnabledByParent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+void CheckIfAutoRestoreEnabledByParent()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_CheckIfCalledCyclically.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L300">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_CheckIfCalledCyclically_" data-uid="TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_CheckIfCalledCyclically" data-uid="TcoCore.TcoState.PlcTcoState.CheckIfCalledCyclically">CheckIfCalledCyclically()</h4>
+  <div class="markdown level1 summary"><p>Private method called each time that State property is asked for. If this instance is auto restorable, this method ensures calling the <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_Restore">Restore()</a> method if:</p>
+<p>
+	This instance has not been called for one or more cycles and starts to be called again. (By calling the instance means asking for its property State).
+</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable">AutoRestorable</a>
+</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_EnableAutoRestore">EnableAutoRestore</a>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+void CheckIfCalledCyclically()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.OnStateChange(System.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L323">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_OnStateChange_" data-uid="TcoCore.TcoState.PlcTcoState.OnStateChange*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_OnStateChange_System_Object_System_Object_" data-uid="TcoCore.TcoState.PlcTcoState.OnStateChange(System.Object,System.Object)">OnStateChange(Object, Object)</h4>
+  <div class="markdown level1 summary"><p>This method is called on each change of the <code>State</code>. This method could be overloaded and custom code should be placed here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public void OnStateChange(dynamic PreviousState, dynamic NewState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">PreviousState</span></td>
+        <td><p>Plc type : INT [VAR_INPUT]; Twin type : <span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></p>
+<p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">NewState</span></td>
+        <td><p>Plc type : INT [VAR_INPUT]; Twin type : <span class="xref">Vortex.Connector.ValueTypes.OnlinerInt</span></p>
+<p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_Restore.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.Restore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L354">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_Restore_" data-uid="TcoCore.TcoState.PlcTcoState.Restore*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_Restore" data-uid="TcoCore.TcoState.PlcTcoState.Restore">Restore()</h4>
+  <div class="markdown level1 summary"><p>Restore this instance to the state -1. Could be called explicitly so as using auto restore mechanism.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	Possibility to use the fluent syntax.
+</p>
+<pre><code>	Restore().RestoreObject(myFirstChildObject).RestoreObject(mySecondChildObject);</code></pre>
+</p></div>
+</example>
+</p>				
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_AutoRestorable">AutoRestorable</a>
+</p>
+<p>
+	See also <a class="xref" href="TcoCore.TcoState.PlcTcoState.html#TcoCore_TcoState_PlcTcoState_EnableAutoRestore">EnableAutoRestore</a>
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic Restore()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoRestorable; Twin type: <see cref="!:ITcoRestorable"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState.RestoreObject(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L382">View Source</a>
+  </span>
+  <a id="TcoCore_TcoState_PlcTcoState_RestoreObject_" data-uid="TcoCore.TcoState.PlcTcoState.RestoreObject*"></a>
+  <h4 id="TcoCore_TcoState_PlcTcoState_RestoreObject_System_Object_" data-uid="TcoCore.TcoState.PlcTcoState.RestoreObject(System.Object)">RestoreObject(Object)</h4>
+  <div class="markdown level1 summary"><p>Ensures calling the <code>Restore()</code> method on the object entered.</p>
+<p>
+<example>
+<div class="NOTE"><h5>Example</h5><p>
+<p>
+	Possibility to use the fluent syntax.
+</p>
+<pre><code>ChangeState(newState).RestoreObject(myFirstChildObject).RestoreObject(mySecondChildObject);</code></pre>
+</p></div>
+</example>
+</p>		
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreReflection]
+public dynamic RestoreObject(dynamic Obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">Obj</span></td>
+        <td><p>Plc type : ITcoRestorable [VAR_INPUT]; Twin type : <see cref="!:ITcoRestorable"></see></p>
+<p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>Plc type ITcoState; Twin type: <a class="xref" href="TcoCore.ITcoState.html">ITcoState</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -750,10 +1604,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_TcoState_PlcTcoState.md&amp;value=---%0Auid%3A%20TcoCore.TcoState.PlcTcoState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L182" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/TcoState.g.cs/#L213" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

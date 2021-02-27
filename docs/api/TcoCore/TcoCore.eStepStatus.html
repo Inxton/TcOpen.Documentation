@@ -684,7 +684,8 @@
   
   <h1 id="TcoCore_eStepStatus" data-uid="TcoCore.eStepStatus" class="text-break">Enum eStepStatus
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Describes the step status inside the sequencer.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TcoCore.html">TcoCore</a></h6>
   <h6><strong>Assembly</strong>: TcoCoreConnector.dll</h6>
@@ -705,27 +706,35 @@ public enum eStepStatus</code></pre>
     <tbody>
       <tr>
         <td id="TcoCore_eStepStatus_Disabled">Disabled</td>
-        <td></td>
+        <td><p>Step is disabled and it is not going to be executed.
+Next enabled step in the sequence will be executed, when sequencer reach that step.</p>
+</td>
       </tr>
       <tr>
         <td id="TcoCore_eStepStatus_Done">Done</td>
-        <td></td>
+        <td><p>Step has been finished. Its code body is not executing.</p>
+</td>
       </tr>
       <tr>
         <td id="TcoCore_eStepStatus_Error">Error</td>
-        <td></td>
+        <td><p>Step is in error state. Its code body is not executing.</p>
+</td>
       </tr>
       <tr>
         <td id="TcoCore_eStepStatus_None">None</td>
-        <td></td>
+        <td><p>No status defined.</p>
+</td>
       </tr>
       <tr>
         <td id="TcoCore_eStepStatus_ReadyToRun">ReadyToRun</td>
-        <td></td>
+        <td><p>Step is ready to run. This case occurs when sequence is in step mode, step is in order of the execution and step is enabled.
+Code body of the current step is not executing. After calling StepIn method, step becames running and its code body starts to be executing.</p>
+</td>
       </tr>
       <tr>
         <td id="TcoCore_eStepStatus_Running">Running</td>
-        <td></td>
+        <td><p>Step is currently running and his code body is currently executing.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>
@@ -737,10 +746,10 @@ public enum eStepStatus</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/new/dev/apiSpec/new?filename=TcoCore_eStepStatus.md&amp;value=---%0Auid%3A%20TcoCore.eStepStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Inxton/TcOpen/new/feature/Exploratory_examples/apiSpec/new?filename=TcoCore_eStepStatus.md&amp;value=---%0Auid%3A%20TcoCore.eStepStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Inxton/TcOpen/blob/dev/src/TcoCore/src/TcoCoreConnector/_generated/eStepStatus.g.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Inxton/TcOpen/blob/feature/Exploratory_examples/src/TcoCore/src/TcoCoreConnector/_generated/eStepStatus.g.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
