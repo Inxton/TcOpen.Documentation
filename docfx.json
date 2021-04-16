@@ -4,6 +4,27 @@
       "src": [
         {
           "files": [
+            "src//Tc.Prober//src//Tc.Prober//Tc.Prober.csproj"         
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "*.Properties",
+            "*.Resx"
+          ],
+          "src": "..//TcOpen//"
+        }
+      ],
+      "dest": "api/Tc.Prober",
+      "filter": "filters/filterConfig.yml",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": true
+    },
+
+    {
+      "src": [
+        {
+          "files": [
             "src//TcoCore//src//TcoCoreConnector//TcoCoreConnector.csproj",
             "src//TcoCore//src//TcoCore.Wpf//TcoCore.Wpf.csproj"
           ],
